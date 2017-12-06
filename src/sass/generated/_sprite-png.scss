@@ -1,10 +1,19 @@
 $sprite: (
+	arrow-back: (
+		offset-x: -84px,
+		offset-y: 0px,
+		width: 17px,
+		height: 16px,
+		total-width: 101px,
+		total-height: 74px,
+		image: '../img/sprite.png'
+	),
 	status-failed: (
 		offset-x: 0px,
 		offset-y: 0px,
 		width: 32px,
 		height: 32px,
-		total-width: 74px,
+		total-width: 101px,
 		total-height: 74px,
 		image: '../img/sprite.png'
 	),
@@ -13,7 +22,7 @@ $sprite: (
 		offset-y: 0px,
 		width: 32px,
 		height: 32px,
-		total-width: 74px,
+		total-width: 101px,
 		total-height: 74px,
 		image: '../img/sprite.png'
 	),
@@ -22,7 +31,7 @@ $sprite: (
 		offset-y: -42px,
 		width: 32px,
 		height: 32px,
-		total-width: 74px,
+		total-width: 101px,
 		total-height: 74px,
 		image: '../img/sprite.png'
 	),
@@ -31,7 +40,7 @@ $sprite: (
 		offset-y: -42px,
 		width: 32px,
 		height: 32px,
-		total-width: 74px,
+		total-width: 101px,
 		total-height: 74px,
 		image: '../img/sprite.png'
 	),
@@ -91,6 +100,9 @@ $sprite: (
 
 
 
+	.icon-arrow-back {
+		@include sprite(arrow-back)
+	}
 	.icon-status-failed {
 		@include sprite(status-failed)
 	}

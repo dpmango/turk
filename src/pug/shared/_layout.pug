@@ -5,13 +5,15 @@ html(lang="ru")
     include _head
 
   body(class=bodyClass)
-    .page(class=outClass)
-      block header
-        include ../components/_header
-      .page__content
-        block content
+    #barba-wrapper
+      .page(class=outClass)
+        block header
+          include ../components/_header
+        .page__content
+          block content
 
-      block footer
-        include ../components/_footer
-      block scripts
-        include _scripts
+        block footer
+          include ../components/_footer
+          
+    block scripts
+      include _scripts

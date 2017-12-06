@@ -158,11 +158,11 @@ $(document).ready(function(){
   // SET ACTIVE CLASS IN HEADER
   // * could be removed in production and server side rendering
   // user .active for li instead
-  $('.header__menu li').each(function(i,val){
-    if ( $(val).find('a').attr('href') == window.location.pathname.split('/').pop() ){
-      $(val).addClass('active');
+  $('.header__menu li a').each(function(i,val){
+    if ( $(val).attr('href') == window.location.pathname.split('/').pop() ){
+      $(val).addClass('is-active');
     } else {
-      $(val).removeClass('active')
+      $(val).removeClass('is-active')
     }
   });
 
@@ -303,5 +303,59 @@ $(document).ready(function(){
   $(".js-dateMask").mask("99.99.99",{placeholder:"ДД.ММ.ГГ"});
   $("input[type='tel']").mask("+7 (000) 000-0000", {placeholder: "+7 (___) ___-____"});
 
+
+  //////////
+  // BARBA PJAX
+  //////////
+
+
+  Barba.Pjax.Dom.containerClass = "page";
+
+  var FadeTransition = Barba.BaseTransition.extend({
+    start: function() {
+      Promise
+        .all([this.newContainerLoading, this.fadeOut()])
+        .then(this.fadeIn.bind(this));
+    },
+
+    fadeOut: function() {
+      return $(this.oldContainer).animate({ opacity: .5 }, 200).promise();
+    },
+
+    fadeIn: function() {
+      var _this = this;
+      var $el = $(this.newContainer);
+
+      $(this.oldContainer).hide();
+
+      $el.css({
+        visibility : 'visible',
+        opacity : .5
+      });
+
+      $el.animate({ opacity: 1 }, 200, function() {
+        document.body.scrollTop = 0;
+        _this.done();
+      });
+    }
+  });
+
+  Barba.Pjax.getTransition = function() {
+    return FadeTransition;
+  };
+
+  Barba.Prefetch.init();
+  Barba.Pjax.start();
+
+  Barba.Dispatcher.on('newPageReady', function(currentStatus, oldStatus, container, newPageRawHTML) {
+
+    // pageReady();
+
+    // close mobile menu
+    if ( _window.width() < bp.mobile ){
+      $('[js-hamburger]').toggleClass('is-active');
+      $('.mobile-navi').toggleClass('is-active');
+    }
+  });
 
 });

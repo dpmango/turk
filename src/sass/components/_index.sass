@@ -6,7 +6,7 @@
   &__wrapper
     background: #FBFCFE
     box-shadow: 0 10px 14px 0 rgba(69,73,91,0.08)
-    padding: 60px 0
+    padding: 25px 0 60px 0
 
   &__header
     display: flex
@@ -22,6 +22,7 @@
   align-items: center
   font-style: 26px
   color: #6B6F83
+  padding-top: 35px
   span, h1
     display: inline-block
     margin: 0
@@ -30,6 +31,23 @@
     font-size: 18px
     margin-left: auto
 
+.page-back
+  display: flex
+  align-items: center
+  color: #A7ABBF
+  .icon-arrow-back
+    +tr
+  span
+    display: inline-block
+    margin-left: 10px
+
+  &:hover
+    .icon-arrow-back
+      transform: translate3d(-15px,0,0)
+
+
+
+// TABLE (SUBMISSIONS)
 .subm-table
   margin-top: 30px
   width: 100%
@@ -80,3 +98,25 @@
 
   td
     font-size: 15px
+
+
+
+// UPLOAD
+.upload
+  margin-top: 25px
+  padding: 60px 90px
+  background: white
+  &__title
+    display: flex
+    align-items: center
+    font-style: 26px
+    color: #404994
+    .ico
+      fill: #404994
+      font-size: 24px
+
+    span, h1
+      font-weight: 400
+      display: inline-block
+      margin: 0
+      margin-left: 12px

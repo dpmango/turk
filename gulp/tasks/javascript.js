@@ -15,6 +15,7 @@ gulp.task('javascript:vendor', function() {
       path.resolve('bower_components', 'magnific-popup/dist/jquery.magnific-popup.min.js'),
       path.resolve('bower_components', 'jquery-validation/dist/jquery.validate.min.js'),
       path.resolve('bower_components', 'jquery-mask-plugin/dist/jquery.mask.min.js'),
+      path.resolve('bower_components', 'barba.js/dist/barba.min.js'),
       config.src.js + '/vendor/**/*.js'
      ])
     .pipe(plumber({ errorHandler: config.errorHandler }))
