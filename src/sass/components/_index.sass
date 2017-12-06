@@ -48,23 +48,30 @@
 
 .p-box
   margin-top: 25px
-  padding: 60px 90px
   background: white
 
 
 // REPORT
 .report
+  padding: 60px
   &__tabs
     display: flex
-
+    justify-content: center
     &--disabled
       pointer-events: none
       .report__tab
         color: #DFE1EE
+    &--left
+      justify-content: left
+      .report__tab
+        &:first-child
+          margin-left: 0
   &__tab
     position: relative
+    display: inline-block
     font-size: 20px
     margin: 0 5%
+    color: #656AEB
     &::after
       display: block
       content: ' '
@@ -77,8 +84,55 @@
       transition: right $transitionSpeed $ease
       +tr
     &:hover, &.is-active
+      color: #535B9E
       &::after
         right: 0
+  &__summary
+    display: flex
+    justify-content: space-between
+    margin-bottom: 40px
+    &-col
+      flex: 0 1 auto
+      padding: 0 15px
+      display: flex
+      flex-direction: column
+      justify-content: flex-start
+      &:first-child
+        padding-left: 0
+      &:last-child
+        padding-right: 0
+    &-head
+      font-size: 12px
+      text-transform: uppercase
+      font-weight: 700
+      color: #C0C4D3
+      letter-spacing: 1px
+    &-text
+      display: inline-block
+      margin-top: auto
+      +nunito
+      font-size: 22px
+      color: #E4E5EC
+
+      &--red
+        font-size: 26px
+        color: $colorRed
+    &-label
+      padding: 8px 15px
+      margin-left: 40px
+      align-self: flex-end
+      margin-bottom: 4px
+
+      +nunito
+      text-transform: uppercase
+      font-size: 13px
+      font-weight: 700
+      letter-spacing: 0.93px
+      border-radius: 4px
+      &--red
+        color: white
+        background: $colorRed
+
 
 .report-blank
   max-width: 600px

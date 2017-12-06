@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="27px" height="27px" viewBox="0 0 27 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>download</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="batch/batch-header" transform="translate(-888.000000, -21.000000)" fill-rule="nonzero" fill="#C0C4D3">
+            <g id="Group-7" transform="translate(360.000000, -1.000000)">
+                <g id="Group-5" transform="translate(99.000000, 0.000000)">
+                    <g id="Group-4">
+                        <g id="download" transform="translate(429.000000, 22.000000)">
+                            <path d="M26.942625,16.7033684 L23.567625,6.756 C23.4135,6.30394737 22.984875,6 22.5,6 L20.25,6 L20.25,8.21052632 L21.688875,8.21052632 L24.3135,15.9473684 L2.685375,15.9473684 L5.31,8.21052632 L6.75,8.21052632 L6.75,6 L4.5,6 C4.015125,6 3.5865,6.30394737 3.432375,6.756 L0.057375,16.7033684 C0.019125,16.8161053 0,16.9343684 0,17.0526316 L0,25.8947368 C0,26.5059474 0.504,27 1.125,27 L25.875,27 C26.496,27 27,26.5059474 27,25.8947368 L27,17.0526316 C27,16.9343684 26.980875,16.8161053 26.942625,16.7033684 Z M22.5,22.5789474 L15.75,22.5789474 L15.75,20.3684211 L22.5,20.3684211 L22.5,22.5789474 Z" id="Shape"></path>
+                            <polygon id="Shape" points="14.625 0 14.625 6.54545455 18 6.54545455 13.5 12 9 6.54545455 12.375 6.54545455 12.375 0"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

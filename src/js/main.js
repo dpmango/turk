@@ -129,24 +129,20 @@ $(document).ready(function(){
   // add .header-static for .page or body
   // to disable sticky header
   if ( $('.header-static').length == 0 ){
-    _window.scrolled(10, function() { // scrolled is a constructor for scroll delay listener
+    _window.on('scroll', throttle(function() { // scrolled is a constructor for scroll delay listener
       var vScroll = _window.scrollTop();
       var header = $('.header').not('.header--static');
-      var headerHeight = header.height();
-      var heroHeight = $('.hero').outerHeight() - headerHeight;
+      var headerHeight = header.outerHeight();
 
-      if ( vScroll > headerHeight ){
-        header.addClass('header--transformed');
-      } else {
-        header.removeClass('header--transformed');
+      if ( _document.height() / _window.height() > 2.5){
+        if ( vScroll > headerHeight ){
+          header.addClass('header--fixed');
+        } else {
+          header.removeClass('header--fixed');
+        }
       }
 
-      if ( vScroll > heroHeight ){
-        header.addClass('header--fixed');
-      } else {
-        header.removeClass('header--fixed');
-      }
-    });
+    }, 10));
   }
 
   // HAMBURGER TOGGLER

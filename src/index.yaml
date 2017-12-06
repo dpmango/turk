@@ -6,7 +6,7 @@ PageList:
 - file: new-batch.html
   ready: 50
 - file: report.html
-  ready: 0
+  ready: 50
 - file: report-progress.html
   ready: 50
 
