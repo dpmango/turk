@@ -9,6 +9,28 @@
     color: #6B6F83
     margin-bottom: 10px
 
+  input, textarea
+    display: block
+    width: 100%
+    -webkit-appearance: none
+    background: white
+    color: #404994
+    border: 1px solid #E4E5EC
+    border-radius: 4px
+    padding: 12px 15px
+    border-radius: 4px
+    box-shadow: 0 2px 1px 0 rgba(0,0,0,0.03)
+    +tr
+    &::placeholder
+      color: #A7ABBE
+    &:focus
+      background: #FBFCFE
+      box-shadow: 0 2px 1px 0 rgba(0,0,0,0.03), inset 0 1px 3px 0 #A7A6FF
+
+  textarea
+    min-height: 92px
+    resize: vertical
+
 
 .uploader
   display: flex
@@ -61,20 +83,16 @@
       cursor: pointer
 
 
-// THIS IS REGULAR CLASS MODIFIER FOR THE INPUT IT
-.ui-input
-  display: block
-  width: 100%
-  -webkit-appearance: none
-  background: white
-  color: $grayColor
-  border: 1px solid $borderColor
-  border-radius: 4px
-  padding: 12px 15px
+
+.ui-checkbox-row
+  display: flex
+  flex-wrap: wrap
 
 
 // Checkbox
 .ui-checkbox
+  margin-top: 10px
+  margin-right: 20px
   input
     display: none
     width: 0.1px
@@ -86,14 +104,17 @@
     &:checked
       + label
         &::before
-          border-color: $colorGreen
+          border-color: #404994
         &::after
-          transform: translateY(-50%) scale(1)
+          background: svg-load('../icons/check.svg') no-repeat center
+
   label
     display: block
     width: 100%
     position: relative
     cursor: pointer
+    font-size: 16px
+    color: #404994
     &::before
       position: absolute
       left: 0
@@ -103,24 +124,23 @@
       content: ' '
       size: 20px
       background-color: white
-      border: 1px solid #AFB7C0
-      border-radius: 4px
+      border: 1px solid #E7E9F0
+      box-shadow: 0 2px 1px 0 rgba(0,0,0,0.03)
+      border-radius: 0px
       cursor: pointer
       vertical-align: middle
       cursor: pointer
-      transition: all $transitionSpeed ease-in-out
+      transition: all .35s ease-in-out
     &::after
       position: absolute
-      left: 1px
+      left: 6px
       top: 50%
-      transform: translateY(-50%) scale(0)
+      transform: translateY(-50%)
       display: inline-block
       content: ' '
-      size: 20px
-      background-image: svg-load('../../images/svg/checkbox.svg')
-      background-repeat: no-repeat
-      background-position: center
-      transition: transform .2s ease
+      size: 10px
+      background: rgba(#404994, .3)
+      transition: all .2s ease
     span
       display: inline-block
       padding-left: 35px

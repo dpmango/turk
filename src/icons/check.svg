@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="8px" viewBox="0 0 10 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>checkIcon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="musicalTurk-final" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Upload-New-Batch" transform="translate(-587.000000, -1141.000000)" fill="#404994">
+            <g id="Group-2" transform="translate(260.000000, 198.000000)">
+                <g id="Stacked-Group" transform="translate(93.000000, 162.000000)">
+                    <g id="Stacked-Group-2" transform="translate(0.000000, 180.000000)">
+                        <g id="Group-6" transform="translate(27.000000, 46.000000)">
+                            <g id="form/title-field" transform="translate(0.000000, 508.000000)">
+                                <g id="Input-2" transform="translate(10.000000, 40.000000)">
+                                    <g id="Stacked-Group-4" transform="translate(192.000000, 0.000000)">
+                                        <g id="Checkbox-1" transform="translate(0.000000, 1.000000)">
+                                            <polygon id="checkIcon" points="15 7.5 13.3333333 6 8.88888889 11 6.66666667 9 5 10.5 8.88888889 14"></polygon>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

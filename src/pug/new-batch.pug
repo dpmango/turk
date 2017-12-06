@@ -18,7 +18,8 @@ block content
             .upload__title
               +icon('ico-upload')
               h1 Upload new dataset
-            
+              
+            // group
             .upload__group
               .upload__group-name
                 +icon('ico-market-music')
@@ -34,3 +35,44 @@ block content
                   .uploader__current
                     .uploader__current-filename
                     +icon('ico-close')
+                    
+            // group
+            .upload__group
+              .upload__group-name
+                +icon('ico-market-music')
+                span Parameters
+              
+              .ui-group
+                label Artist blacklist
+                textarea(placeholder="Artist 1")
+              .ui-group
+                label Keyword blacklist
+                textarea(placeholder="keywrods" value="Garbage, gangster, gangstar, gang")
+              .ui-group
+                label Duplicates threshold
+                input(placeholder="25%")
+              .ui-group
+                label Various Artists threshold
+                input(placeholder="Count or percentage")
+              .ui-group
+                label Language
+                .ui-checkbox-row
+                  .ui-checkbox
+                    input(type="checkbox" name="cb" id="cb_1")
+                    label(for="cb_1") 
+                      span Brazilian Portugese
+                  .ui-checkbox
+                    input(type="checkbox" name="cb" id="cb_2")
+                    label(for="cb_2")
+                      span English
+                  .ui-checkbox
+                    input(type="checkbox" name="cb" id="cb_3")
+                    label(for="cb_3")
+                      span Spanish
+            
+              // CTA
+              .upload__cta
+                button(type="submit").btn.btn-primary.btn--filled
+                  span Start Testing
+                  
+              
