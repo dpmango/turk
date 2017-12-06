@@ -299,6 +299,35 @@ $(document).ready(function(){
     }
   });
 
+  // file uploader
+  var file_api = ( window.File && window.FileReader && window.FileList && window.Blob ) ? true : false;
+
+  var uploader = $('[js-uploader]');
+  var uploaderFile = uploader.find('input');
+  var uploaderText = uploader.find('.uploader__current-filename');
+  var uploaderTag = uploader.find('.uploader__current');
+
+  uploaderFile.on('change', function(){
+      var file_name;
+      if( file_api && uploaderFile[ 0 ].files[ 0 ] )
+          file_name = uploaderFile[ 0 ].files[ 0 ].name;
+      else
+          file_name = uploaderFile.val().replace( "C:\\fakepath\\", '' );
+
+      if( ! file_name.length )
+          return;
+
+      uploaderText.text(file_name);
+      uploaderTag.addClass('has-file');
+
+  });
+
+  uploaderTag.on('click', '.ico', function(){
+    uploaderFile.val("");
+    uploaderTag.removeClass('has-file');
+  })
+
+
   // Masked input
   $(".js-dateMask").mask("99.99.99",{placeholder:"ДД.ММ.ГГ"});
   $("input[type='tel']").mask("+7 (000) 000-0000", {placeholder: "+7 (___) ___-____"});

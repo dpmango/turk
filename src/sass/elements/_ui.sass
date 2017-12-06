@@ -1,5 +1,65 @@
 // UI
 
+.ui-group
+  margin-top: 25px
+  margin-left: 25px
+  > label
+    display: block
+    font-size: 16px
+    color: #6B6F83
+    margin-bottom: 10px
+
+
+.uploader
+  display: flex
+  &__btn
+    position: relative
+    overflow: hidden
+    input
+      position: absolute
+      top: 0
+      left: 0
+      bottom: 0
+      opacity: 0.0
+      cursor: pointer
+    ::-webkit-file-upload-button
+      cursor: pointer
+    label
+      display: inline-block
+      padding: 10px 25px
+      font-size: 16px
+      background: #EDEEF4
+      border-radius: 4px
+      border: 1px solid #C0C4D3
+      box-shadow: 0 2px 1px 0 rgba(0,0,0,0.03)
+      cursor: pointer
+      +tr
+    &:hover
+      label
+        background: #C0C4D3
+        color: white
+  &__current
+    display: flex
+    align-items: center
+    margin-left: 25px
+    padding: 10px 25px
+    display: flex
+    align-items: center
+    background: rgba(237,238,244,0.20)
+    box-shadow: 0 2px 1px 0 rgba(0,0,0,0.03)
+    color: #404994
+    opacity: 0
+    +tr
+    &.has-file
+      pointer-events: all
+      opacity: 1
+    &-filename
+
+    .ico
+      margin-left: 25px
+      font-size: 12px
+      cursor: pointer
+
 
 // THIS IS REGULAR CLASS MODIFIER FOR THE INPUT IT
 .ui-input

@@ -18,3 +18,19 @@ block content
             .upload__title
               +icon('ico-upload')
               h1 Upload new dataset
+            
+            .upload__group
+              .upload__group-name
+                +icon('ico-market-music')
+                span Choose a dataset (csv only)
+              
+              .ui-group
+                label Dataset
+                .uploader(js-uploader)
+                  .uploader__btn
+                    label Choose file
+                      input(type="file" id="file" name="file")
+                      
+                  .uploader__current
+                    .uploader__current-filename
+                    +icon('ico-close')
