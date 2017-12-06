@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="184px" height="25px" viewBox="0 0 184 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>Logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Logo-1" transform="translate(-1.000000, 0.000000)">
+            <g id="Logo">
+                <g id="Group">
+                    <text id="Logo" font-family="Nunito-Regular, Nunito" font-size="20" font-weight="normal" line-spacing="30" letter-spacing="3.63636374" fill="#3F4796">
+                        <tspan x="0" y="22">Musical Turk</tspan>
+                    </text>
+                    <rect id="Rectangle" fill="#8A91FF" x="2" y="0" width="5" height="5"></rect>
+                    <rect id="Rectangle" fill="#FFA9D9" x="12" y="0" width="5" height="5"></rect>
+                    <rect id="Rectangle" fill="#FFA9D9" x="22" y="0" width="5" height="5"></rect>
+                    <rect id="Rectangle" fill="#FFA9D9" x="32" y="0" width="5" height="5"></rect>
+                    <rect id="Rectangle" fill="#FFA9D9" x="42" y="0" width="5" height="5"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

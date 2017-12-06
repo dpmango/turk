@@ -1,4 +1,122 @@
 // HEADER
 .header
+  position: absolute
+  left: 0
+  right: 0
+  z-index: 10
+  padding-top: 40px
+  padding-bottom: 170px
+  background: white
   &__wrapper
-    
+    display: flex
+    align-items: center
+
+  &__logo
+
+  &__menu
+    flex: 0 0 auto
+    display: flex
+    align-items: center
+    list-style: none
+    margin: 0 auto
+    padding: 0
+    li
+      display: inline-block
+      color: #464855
+      font-family: 'Nunito', sans-serif
+      a:not(.btn)
+        margin-right: 75px
+        min-width: 225px
+        display: inline-block
+        position: relative
+        +tr(color)
+        .ico
+          font-size: 16px
+        span
+          vertical-align: top
+          font-weight: 600
+          margin-left: 10px
+        &::after
+          display: block
+          content: ' '
+          position: absolute
+          left: 0
+          right: 100%
+          bottom: -15px
+          background: $colorPrimary
+          height: 5px
+          transition: right $transitionSpeed $ease
+        &:hover
+          color: $colorPrimary
+        &.is-active
+          &::after
+            right: 0
+          &:hover::after
+            right: 100%
+
+  &__user
+    margin-left: auto
+    display: flex
+    align-items: center
+    +nunito
+    &-title
+      color: #898EA2
+      margin-right: 10px
+
+    &-drop
+      position: relative
+      display: flex
+      align-items: center
+      cursor: pointer
+      .ico-drop-selector
+        font-size: 7px
+        color: $colorPrimary
+        margin-left: 8px
+        +tr
+
+      &__options
+        position: absolute
+
+      &:hover
+        .header__user-name,
+        .ico-drop-selector
+          color: $fontColor
+
+    &-name
+      color: $colorPrimary
+      +tr
+
+  &__hamburger
+    display: none
+    margin-left: auto
+
+
++r($desktop)
+  .header
+    &__menu
+      li
+        a:not(.btn)
+          margin-right: 35px
+          min-width: 170px
+
+    &__user
+      &-title
+        display: none
+
++r($tablet)
+  .header
+    &__menu
+      li
+        a:not(.btn)
+          display: none
+
++r($mobile)
+  .header
+    padding-top: 20px
+    padding-bottom: 20px
+    &__menu
+      display: none
+    &__user
+      display: none
+    &__hamburger
+      display: block

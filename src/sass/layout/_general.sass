@@ -14,9 +14,9 @@ ul
     display: inline-block
 
 body, html
-  background: white
+  background: #F4F5FA
   color: $fontColor
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif
   font-size: 16px
   min-width: 320px
   max-width: 100%
@@ -25,15 +25,42 @@ body, html
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
 
+
 .page
   display: flex
   flex-direction: column
+  min-height: 100vh
   &__content
     flex: 1 1 auto
 
 .container
-  max-width: 1200px
+  max-width: 1250px
   margin-left: auto
   margin-right: auto
-  padding-left: 20px
-  padding-right: 20px
+  padding-left: 40px
+  padding-right: 40px
+
++r($desktop)
+  .container
+    padding-left: 30px
+    padding-right: 30px
+
+
++r($mobile-s)
+  .container
+    padding-left: 20px
+    padding-right: 20px
+
+
+// TEMP CODE
+.dev-bp-debug
+  position: fixed
+  top: 0
+  right: 0
+  z-index: 10000
+  background: #333
+  color: white
+  font-size: 12px
+  color: white
+  border-bottom-left-radius: 4px
+  padding: 5px 10px

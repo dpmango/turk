@@ -39,6 +39,35 @@ $(document).ready(function(){
     $('body').addClass('is-ie');
   }
 
+  var bp = {
+    mobileS: 375,
+    mobile: 568,
+    tablet: 768,
+    desktop: 1024,
+    wide: 1336,
+    hd: 1680
+  }
+
+  //////////
+  // DEVELOPMENT HELPER
+  //////////
+  var prevBg;
+  function setBreakpoint(){
+    var wWidth = _window.width();
+
+    var content = "<div class='dev-bp-debug'>"+wWidth+"</div>";
+
+    $('.page').append(content);
+    setTimeout(function(){
+      $('.dev-bp-debug').fadeOut();
+    },1000);
+    setTimeout(function(){
+      $('.dev-bp-debug').remove();
+    },1500)
+  }
+
+  _window.on('resize', debounce(setBreakpoint, 200))
+
   //////////
   // COMMON
   //////////
@@ -121,9 +150,9 @@ $(document).ready(function(){
   }
 
   // HAMBURGER TOGGLER
-  $('.hamburger').on('click', function(){
-    $('.hamburger').toggleClass('active');
-    $('.mobile-navi').toggleClass('active');
+  $('[js-hamburger]').on('click', function(){
+    $('.hamburger').toggleClass('is-active');
+    $('.mobile-navi').toggleClass('is-active');
   });
 
   // SET ACTIVE CLASS IN HEADER

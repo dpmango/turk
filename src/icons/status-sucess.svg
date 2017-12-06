@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>status-sucess</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="row/cell-status/successful" transform="translate(-30.000000, -24.000000)">
+            <g id="status-sucess" transform="translate(25.000000, 19.000000)">
+                <circle id="Oval-2" fill="#F3FEF9" cx="21" cy="21" r="12"></circle>
+                <path d="M36,21 C36,29.2845 29.2845,36 21,36 C12.7155,36 6,29.2845 6,21 C6,12.7155 12.7155,6 21,6 C26.9385,6 32.07,9.45 34.5015,14.4555" id="Shape" stroke="#61E798" stroke-width="2" transform="translate(21.000000, 21.000000) rotate(58.000000) translate(-21.000000, -21.000000) "></path>
+                <polyline id="Shape" stroke="#61E798" stroke-width="2" stroke-linecap="square" transform="translate(21.737451, 18.750632) rotate(46.000000) translate(-21.737451, -18.750632) " points="24.8038026 11.6156419 25.4874511 25.8856217 17.9874511 25.8856217"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

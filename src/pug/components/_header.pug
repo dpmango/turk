@@ -3,15 +3,28 @@ header.header
   .container
     .header__wrapper
       .header__logo
-        a.logo(href="/homepage.pug")
-          +icon('icon-viber')
-      .header__menu
-        ul.header__menu__list
-          - var list = ["Point 1", "Point 2", "Point 3"]
-            each item in list
-              li
-                a.header__menu__link(href="#")=item
+        a.logo(href="#")
+          include ../../icons/logo.svg
+      ul.header__menu
+        li
+          a(href="#").is-active
+            +icon('ico-home')
+            span Submissions (20)
+        li
+          a(href="#").btn.btn-primary
+            span Add new dataset
       
-      .header__cta
+      .header__user
+        .header__user-title Welcome back,
+        .header__user-drop
+          .header__user-name Johnathan
+          +icon('ico-drop-selector')
+          .header__user-drop__options
+      
+      .header__hamburger(js-hamburger)
+        .hamburger.hamburger--squeeze
+          .hamburger-box
+            .hamburger-inner
+            
         
 // HEADER :: END

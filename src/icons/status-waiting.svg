@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>status-waiting</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="row/cell-status/waiting" transform="translate(-30.000000, -24.000000)" stroke="#618FE7" stroke-width="2">
+            <g id="status-waiting" transform="translate(29.000000, 23.000000)">
+                <path d="M32,17 C32,25.2845 25.2845,32 17,32 C8.7155,32 2,25.2845 2,17 C2,8.7155 8.7155,2 17,2 C22.9385,2 28.07,5.45 30.5015,10.4555" id="Shape" transform="translate(17.000000, 17.000000) rotate(175.000000) translate(-17.000000, -17.000000) "></path>
+                <polyline id="Shape" stroke-linecap="square" transform="translate(18.750000, 14.750000) rotate(-270.000000) translate(-18.750000, -14.750000) " points="22.5 11 22.5 18.5 15 18.5"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>
