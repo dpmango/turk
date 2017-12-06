@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="24px" viewBox="0 0 22 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>document</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.5">
+        <g id="icons/document" fill-rule="nonzero" fill="#404994">
+            <g id="document">
+                <rect id="Rectangle-path" x="5" y="10" width="12" height="2"></rect>
+                <rect id="Rectangle-path" x="5" y="15" width="12" height="2"></rect>
+                <path d="M21,24 L1,24 C0.447,24 0,23.552 0,23 L0,3 C0,2.448 0.447,2 1,2 L4,2 L4,4 L2,4 L2,22 L20,22 L20,4 L18,4 L18,2 L21,2 C21.553,2 22,2.448 22,3 L22,23 C22,23.552 21.553,24 21,24 Z" id="Shape"></path>
+                <path d="M15,0 L7,0 C6.447,0 6,0.448 6,1 L6,5 C6,5.552 6.447,6 7,6 L9,6 C9,4.895 9.895,4 11,4 C12.105,4 13,4.895 13,6 L15,6 C15.553,6 16,5.552 16,5 L16,1 C16,0.448 15.553,0 15,0 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -6,6 +6,21 @@ extends shared/_layout
 block content
   
   // SUBMISSIONS
-  .submissions
+  .subm
+    .container
+      .subm__wrapper
+        .container.container--narrow
+
+          .page-title
+            include ../icons/list.svg
+            h1 All Submissions (20)
+            .page-title__num 1-10 of 202
+      
   
-  
+          table
+            thead
+              tr
+                td Batch ID
+                td Batch Status 
+                td
+                  +icon('ico-calendar-grid')

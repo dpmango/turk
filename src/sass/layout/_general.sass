@@ -14,6 +14,7 @@ ul
     display: inline-block
 
 body, html
+  position: relative
   background: #F4F5FA
   color: $fontColor
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif
@@ -32,6 +33,7 @@ body, html
   min-height: 100vh
   &__content
     flex: 1 1 auto
+    padding-top: 140px
 
 .container
   max-width: 1250px
@@ -39,6 +41,8 @@ body, html
   margin-right: auto
   padding-left: 40px
   padding-right: 40px
+  &--narrow
+    max-width: 1050px
 
 +r($desktop)
   .container

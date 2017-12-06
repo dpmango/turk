@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="16px" viewBox="0 0 14 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>calendar-grid-58</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="table/batch-status-creation/header" transform="translate(-354.000000, -31.000000)" fill-rule="nonzero">
+            <g id="cell/batch-creation-date">
+                <g transform="translate(318.000000, 0.000000)">
+                    <g id="Group" transform="translate(36.066614, 30.000000)">
+                        <g id="Group-2">
+                            <g id="calendar-grid-58" transform="translate(0.000000, 1.000000)">
+                                <rect id="background" fill="#F9FAFD" x="0" y="4" width="13" height="12" rx="2"></rect>
+                                <path d="M12.1875,2 L10.5625,2 L10.5625,0 L8.9375,0 L8.9375,2 L7.3125,2 L7.3125,0 L5.6875,0 L5.6875,2 L4.0625,2 L4.0625,0 L2.4375,0 L2.4375,2 L0.8125,2 C0.3631875,2 0,2.447 0,3 L0,15 C0,15.553 0.3631875,16 0.8125,16 L12.1875,16 C12.6368125,16 13,15.553 13,15 L13,3 C13,2.447 12.6368125,2 12.1875,2 Z M11.375,14 L1.625,14 L1.625,5 L11.375,5 L11.375,14 Z" id="Shape" fill="#C0C4D1"></path>
+                                <rect id="Rectangle-path" fill="#C0C4D1" x="3.25" y="7" width="1.625" height="2"></rect>
+                                <rect id="Rectangle-path" fill="#C0C4D1" x="5.6875" y="7" width="1.625" height="2"></rect>
+                                <rect id="Rectangle-path" fill="#C0C4D1" x="3.25" y="10" width="1.625" height="2"></rect>
+                                <rect id="Rectangle-path" fill="#C0C4D1" x="5.6875" y="10" width="1.625" height="2"></rect>
+                                <rect id="Rectangle-path" fill="#C0C4D1" x="8.125" y="7" width="1.625" height="2"></rect>
+                                <rect id="Rectangle-path" fill="#C0C4D1" x="8.125" y="10" width="1.625" height="2"></rect>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
