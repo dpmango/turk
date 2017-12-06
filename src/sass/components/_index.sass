@@ -12,6 +12,10 @@
     display: flex
     align-items: center
 
+  &__more
+    text-align: center
+    margin-top: 50px
+
 
 .page-title
   display: flex
@@ -26,9 +30,52 @@
     font-size: 18px
     margin-left: auto
 
-table
+.subm-table
+  margin-top: 30px
+  width: 100%
+  border-collapse: collapse
+  border: 1px solid #EDEEF4
   thead
+    background: #FBFCFE
+    td
+      font-size: 15px
+      padding: 30px 20px 15px 20px
+      border-bottom: 1px solid $borderColor
+  tbody
+    td
+      font-size: 16px
+      letter-spacing: 0.44px
+      background: white
+      padding: 30px 20px
+      border-bottom: 1px solid rgba(#E8E9EC, .2)
+      +tr
+    tr
+      &:last-child td
+        border-color: #EDEEF4
+      &:hover
+        td
+          background: #FBFCFE
 
+
+  &__icon-td
+    display: flex
+    align-items: center
+    span
+      vertical-align: top
+      margin-left: 8px
+  &__status
+    display: flex
+    align-items: center
+    span
+      margin-left: 15px
+    &--sucess
+      color: $colorGreen
+    &--failed
+      color: $colorRed
+    &--waiting
+      color: #618FE7
+    &--progress
+      color: #E79461
   tr
 
   td

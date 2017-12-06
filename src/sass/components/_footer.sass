@@ -1,4 +1,45 @@
 // FOOTER
 .footer
-  &__wrapper
-    
+  padding: 90px 0 150px 0
+  left: 0
+  right: 0
+  bottom: 0
+  &__menu
+    list-style: none
+    padding: 10px 0 25px 0
+    margin: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    border-bottom: 1px solid #EDEEF4
+    li
+      display: inline-block
+      margin: 0 3%
+
+    a
+      position: relative
+      font-size: 16px
+      +nunito
+      color: $colorPrimary
+      &::after
+        display: block
+        content: ' '
+        position: absolute
+        left: 0
+        right: 100%
+        bottom: -7px
+        background: $colorPrimary
+        height: 3px
+        transition: right $transitionSpeed $ease
+        +tr
+      &:hover
+        &::after
+          right: 0
+
+  &__logo
+    margin-top: 40px
+    text-align: center
+
++r($mobile)
+  .footer
+    padding: 70px 0 80px 0

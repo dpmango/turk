@@ -1,11 +1,38 @@
 $sprite: (
-	logo: (
+	status-failed: (
 		offset-x: 0px,
 		offset-y: 0px,
-		width: 300px,
-		height: 70px,
-		total-width: 300px,
-		total-height: 70px,
+		width: 32px,
+		height: 32px,
+		total-width: 74px,
+		total-height: 74px,
+		image: '../img/sprite.png'
+	),
+	status-progress: (
+		offset-x: -42px,
+		offset-y: 0px,
+		width: 32px,
+		height: 32px,
+		total-width: 74px,
+		total-height: 74px,
+		image: '../img/sprite.png'
+	),
+	status-sucess: (
+		offset-x: 0px,
+		offset-y: -42px,
+		width: 32px,
+		height: 32px,
+		total-width: 74px,
+		total-height: 74px,
+		image: '../img/sprite.png'
+	),
+	status-waiting: (
+		offset-x: -42px,
+		offset-y: -42px,
+		width: 32px,
+		height: 32px,
+		total-width: 74px,
+		total-height: 74px,
 		image: '../img/sprite.png'
 	),
 );
@@ -64,6 +91,15 @@ $sprite: (
 
 
 
-	.icon-logo {
-		@include sprite(logo)
+	.icon-status-failed {
+		@include sprite(status-failed)
+	}
+	.icon-status-progress {
+		@include sprite(status-progress)
+	}
+	.icon-status-sucess {
+		@include sprite(status-sucess)
+	}
+	.icon-status-waiting {
+		@include sprite(status-waiting)
 	}
