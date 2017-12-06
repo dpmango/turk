@@ -8,6 +8,24 @@ $sprite: (
 		total-height: 74px,
 		image: '../img/sprite.png'
 	),
+	calendar-grid: (
+		offset-x: -84px,
+		offset-y: -26px,
+		width: 14px,
+		height: 16px,
+		total-width: 101px,
+		total-height: 74px,
+		image: '../img/sprite.png'
+	),
+	list: (
+		offset-x: -84px,
+		offset-y: -52px,
+		width: 16px,
+		height: 14px,
+		total-width: 101px,
+		total-height: 74px,
+		image: '../img/sprite.png'
+	),
 	status-failed: (
 		offset-x: 0px,
 		offset-y: 0px,
@@ -102,6 +120,12 @@ $sprite: (
 
 	.icon-arrow-back {
 		@include sprite(arrow-back)
+	}
+	.icon-calendar-grid {
+		@include sprite(calendar-grid)
+	}
+	.icon-list {
+		@include sprite(list)
 	}
 	.icon-status-failed {
 		@include sprite(status-failed)
