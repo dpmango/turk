@@ -1,7 +1,18 @@
 ProjectTitle: Muscial Turk
 
 PageList:
-- file: homepage.html
-  ready: 100
-- file: page.html
+- file: submissions.html
+  ready: 50
+- file: new-batch.html
+  ready: 25
+- file: report.html
+  ready: 0
+- file: report-progress.html
+  ready: 0
+
+- file: field-level.html
+  ready: 0
+- file: row-scores.html
+  ready: 0
+- file: criteria-scores.html
   ready: 0
