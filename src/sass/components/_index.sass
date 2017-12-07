@@ -55,6 +55,7 @@
 .report
   padding: 60px
   &__tabs
+    position: relative
     display: flex
     justify-content: center
     &--disabled
@@ -66,6 +67,15 @@
       .report__tab
         &:first-child
           margin-left: 0
+    &::after
+      display: block
+      content: ' '
+      position: absolute
+      bottom: -12px
+      left: 0
+      right: 0
+      height: 1px
+      background: rgba(#E8E9EC, .5)
   &__tab
     position: relative
     display: inline-block
@@ -110,6 +120,7 @@
     &-text
       display: inline-block
       margin-top: auto
+      padding-top: 5px
       +nunito
       font-size: 22px
       color: #E4E5EC
@@ -117,6 +128,11 @@
       &--red
         font-size: 26px
         color: $colorRed
+    a.report__summary-text
+      +tr
+      &:hover
+        color: $colorPrimary
+
     &-label
       padding: 8px 15px
       margin-left: 40px
@@ -132,6 +148,55 @@
       &--red
         color: white
         background: $colorRed
+
+  &__top
+    margin-top: 70px
+    display: flex
+    border-bottom: 1px solid rgba(#E8E9EC, .5)
+    padding-bottom: 30px
+    &-col
+      flex: 0 1 auto
+      display: flex
+      flex-direction: column
+      padding-right: 30px
+      &:last-child
+        padding-right: 0
+    &-percent
+      color: #535B9E
+      line-height: 1
+      font-size: 34px
+    &-description
+      color: #6B6F83
+      font-size: 20px
+      margin-top: auto
+      padding-top: 8px
+    &-stars
+      padding-top: 4px
+      color: #535B9E
+      font-size: 23px
+  &__view
+    margin-top: 30px
+    &-title
+      font-size: 20px
+      color: #6B6F83
+    &-link
+      margin-top: 25px
+      display: flex
+      align-items: center
+      color: #535B9E
+      .ico
+        font-size: 28px
+        fill: rgba(#404994, .5)
+        +tr
+      span
+        display: inline-block
+        margin-left: 8px
+        font-size: 20px
+        +tr
+      &:hover
+        color: $colorPrimary
+        .ico
+          fill: rgba($colorPrimary, .5)
 
 
 .report-blank
@@ -158,3 +223,6 @@
     margin-top: 40px
     img
       max-width: 100%
+
+.report-container
+  max-width: 620px

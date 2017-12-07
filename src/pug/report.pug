@@ -38,3 +38,34 @@ block content
               .report__tab.is-active Apple & Itunes Guidelines
               .report__tab Custom Parameters
             
+
+            // summary
+            .report-container
+              .report__top
+                .report__top-col
+                  .report__top-percent 37%
+                  .report__top-description Total percent of rows with errors
+                .report__top-col
+                  .report__top-stars
+                    +icon('ico-star-filled')
+                    +icon('ico-star-filled')
+                    +icon('ico-star-filled')
+                    +icon('ico-star-empty')
+                    +icon('ico-star-empty')
+                  .report__top-description Overall data quality
+              
+              .report__view
+                .report__view-title What are the biggest problems with the dataset?
+                a(href="#").report__view-link
+                  +icon('ico-document')
+                  span View the test criteria scores
+              .report__view
+                .report__view-title What is the sum of problems in each row?
+                a(href="#").report__view-link
+                  +icon('ico-document')
+                  span View the input row scores
+              .report__view
+                .report__view-title Which fields in the dataset failed?
+                a(href="#").report__view-link
+                  +icon('ico-document')
+                  span View the field level issues
