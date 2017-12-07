@@ -123,7 +123,7 @@ $(document).ready(function(){
     }
   }
   revealFooter();
-  _window.resized(100, revealFooter);
+  _window.on('resize', debounce(revealFooter, 100));
 
   // HEADER SCROLL
   // add .header-static for .page or body
@@ -294,6 +294,22 @@ $(document).ready(function(){
       }
     }
   });
+
+
+  // textarea autoExpand
+  $(document)
+    .one('focus.autoExpand', 'textarea.autoExpand', function(){
+        var savedValue = this.value;
+        this.value = '';
+        this.baseScrollHeight = this.scrollHeight;
+        this.value = savedValue;
+    })
+    .on('input.autoExpand', 'textarea.autoExpand', function(){
+        var minRows = this.getAttribute('data-min-rows')|0, rows;
+        this.rows = minRows;
+        rows = Math.ceil((this.scrollHeight - this.baseScrollHeight) / 17);
+        this.rows = minRows + rows;
+    });
 
   // file uploader
   var file_api = ( window.File && window.FileReader && window.FileList && window.Blob ) ? true : false;
