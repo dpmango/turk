@@ -144,7 +144,7 @@ $(document).ready(function(){
       dropdown.addClass('is-active');
     })
     .on('click', '.page__content', function(){
-      $('[js-header-dropdown-list]').addClass('is-active');
+      $('[js-header-dropdown-list]').removeClass('is-active');
     })
 
 
