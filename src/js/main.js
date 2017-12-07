@@ -141,7 +141,7 @@ $(document).ready(function(){
         top: pos.top + $(this).outerHeight() + 20,
         right: _window.width() - (pos.left + $(this).outerWidth())
       })
-      dropdown.toggleClass('is-active');
+      dropdown.addClass('is-active');
     })
     .on('click', '.page__content', function(){
       $('[js-header-dropdown-list]').addClass('is-active');
