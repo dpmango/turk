@@ -11,8 +11,8 @@ PageList:
   ready: 50
 
 - file: field-level.html
-  ready: 0
+  ready: 50
 - file: row-scores.html
-  ready: 0
+  ready: 25
 - file: criteria-scores.html
-  ready: 0
+  ready: 25

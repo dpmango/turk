@@ -1,5 +1,5 @@
 ---
-title: New Batch
+title: Row scrores
 ---
 extends shared/_layout
 block content
@@ -8,105 +8,50 @@ block content
   .subm
     .container
       .subm__wrapper
-        .container.container--narrow
+        .container.container--smaller
 
-          .page-title
-            include ../icons/list.svg
-            h1 All Submissions (20)
-            .page-title__num 1-10 of 202
+          a(href="submissions.html").page-back
+            .icon.icon-arrow-back
+            span Report Summary
       
-  
-          table.subm-table
-            thead
-              tr
-                td Batch ID
-                td Batch Status 
-                td
-                  .subm-table__icon-td
-                    include ../icons/calendar-grid.svg
-                    span Date Created
-            tbody
-              tr
-                td 2010
-                td
-                  .subm-table__status.subm-table__status--sucess
-                    i.icon.icon-status-sucess
-                    span Success
-                td Monday Sept. 4, 2017 at 11:00 AM PST
-                
-              tr
-                td 2010
-                td
-                  .subm-table__status.subm-table__status--failed
-                    i.icon.icon-status-failed
-                    span Failed
-                td Monday Sept. 4, 2017 at 11:00 AM PST
-              tr
-                td 2010
-                td
-                  .subm-table__status.subm-table__status--failed
-                    i.icon.icon-status-failed
-                    span Failed
-                td Monday Sept. 4, 2017 at 11:00 AM PST
-              tr
-                td 2010
-                td
-                  .subm-table__status.subm-table__status--sucess
-                    i.icon.icon-status-sucess
-                    span Success
-                td Monday Sept. 4, 2017 at 11:00 AM PST
-              tr
-                td 2010
-                td
-                  .subm-table__status.subm-table__status--sucess
-                    i.icon.icon-status-sucess
-                    span Success
-                td Monday Sept. 4, 2017 at 11:00 AM PST
-              tr
-                td 2010
-                td
-                  .subm-table__status.subm-table__status--waiting
-                    i.icon.icon-status-waiting
-                    span Waiting
-                td Monday Sept. 4, 2017 at 11:00 AM PST
-              tr
-                td 2010
-                td
-                  .subm-table__status.subm-table__status--waiting
-                    i.icon.icon-status-waiting
-                    span Waiting
-                td Monday Sept. 4, 2017 at 11:00 AM PST
-              tr
-                td 2010
-                td
-                  .subm-table__status.subm-table__status--progress
-                    i.icon.icon-status-progress
-                    span In Progress
-                td Monday Sept. 4, 2017 at 11:00 AM PST
-              tr
-                td 2010
-                td
-                  .subm-table__status.subm-table__status--progress
-                    i.icon.icon-status-progress
-                    span In Progress
-                td Monday Sept. 4, 2017 at 11:00 AM PST
-              
-              tr
-                td 2010
-                td
-                  .subm-table__status.subm-table__status--sucess
-                    i.icon.icon-status-sucess
-                    span Success
-                td Monday Sept. 4, 2017 at 11:00 AM PST
-              tr
-                td 2010
-                td
-                  .subm-table__status.subm-table__status--sucess
-                    i.icon.icon-status-sucess
-                    span Success
-                td Monday Sept. 4, 2017 at 11:00 AM PST
-              
-          
+          .p-box.report
+            // summary
+            .report__summary
+              .report__summary-col
+                .report__summary-head risk analysis
+                .report__summary-text.report__summary-text--red Errors per row 
+              .report__summary-label.report__summary-label--red failed
+              .report__summary-col
+                .report__summary-head batch id
+                .report__summary-text 1020
+              .report__summary-col
+                .report__summary-head batch
+                .report__summary-text Monday June 12th 2017 11:00AM PST
+              .report__summary-col
+                .report__summary-head download
+                a(href="#").report__summary-text
+                  +icon('ico-download')
+            
+            
+            // table
+            table.subm-table.subm-table--full
+              thead
+                tr
+                  td #
+                  td Row ID
+                  td Count of Errors
+                  td Count of Warnings
+                  td Overall Status
+                  
+              tbody
+                each val in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+                  tr
+                    td #
+                    td 1099432
+                    td 0
+                    td 25
+                    td Warning
+
           .subm__more
             a(href="#").btn.btn-more
               span Load more
