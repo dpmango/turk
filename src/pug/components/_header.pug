@@ -16,15 +16,22 @@ header.header
       
       .header__user
         .header__user-title Welcome back,
-        .header__user-drop
+        .header__user-drop(js-header-dropdown)
           .header__user-name Johnathan
           +icon('ico-drop-selector')
-          .header__user-drop__options
-      
+        
+            
       .header__hamburger(js-hamburger)
         .hamburger.hamburger--squeeze
           .hamburger-box
             .hamburger-inner
             
-        
+ul.header__user-drop__options(js-header-dropdown-list)
+  li
+    a(href="#") Profile
+  li
+    a(href="#") Settings
+  hr
+  li
+    a(href="#") Log Out  
 // HEADER :: END

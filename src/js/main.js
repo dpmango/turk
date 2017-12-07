@@ -49,26 +49,6 @@ $(document).ready(function(){
   }
 
   //////////
-  // DEVELOPMENT HELPER
-  //////////
-  var prevBg;
-  function setBreakpoint(){
-    var wWidth = _window.width();
-
-    var content = "<div class='dev-bp-debug'>"+wWidth+"</div>";
-
-    $('.page').append(content);
-    setTimeout(function(){
-      $('.dev-bp-debug').fadeOut();
-    },1000);
-    setTimeout(function(){
-      $('.dev-bp-debug').remove();
-    },1500)
-  }
-
-  _window.on('resize', debounce(setBreakpoint, 200))
-
-  //////////
   // COMMON
   //////////
 
@@ -151,6 +131,24 @@ $(document).ready(function(){
     $('.mobile-navi').toggleClass('is-active');
   });
 
+  // HEADER DROPDOWN
+  $(document)
+    .on('click', '[js-header-dropdown]', function(){
+      var pos = $(this).offset();
+      var dropdown = $('[js-header-dropdown-list]');
+
+      dropdown.css({
+        top: pos.top + $(this).outerHeight() + 20,
+        right: _window.width() - (pos.left + $(this).outerWidth())
+      })
+      dropdown.toggleClass('is-active');
+    })
+    .on('click', '.page__content', function(){
+      $('[js-header-dropdown-list]').addClass('is-active');
+    })
+
+
+
   // SET ACTIVE CLASS IN HEADER
   // * could be removed in production and server side rendering
   // user .active for li instead
@@ -194,47 +192,6 @@ $(document).ready(function(){
   ////////////
   // UI
   ////////////
-
-  // custom selects
-  $('.ui-select__visible').on('click', function(e){
-    var that = this
-    // hide parents
-    $(this).parent().parent().parent().find('.ui-select__visible').each(function(i,val){
-      if ( !$(val).is($(that)) ){
-        $(val).parent().removeClass('active')
-      }
-    });
-
-    $(this).parent().toggleClass('active');
-  });
-
-  $('.ui-select__dropdown span').on('click', function(){
-    // parse value and toggle active
-    var value = $(this).data('val');
-    if (value){
-      $(this).siblings().removeClass('active');
-      $(this).addClass('active');
-
-      // set visible
-      $(this).closest('.ui-select').removeClass('active');
-      $(this).closest('.ui-select').find('input').val(value);
-
-      $(this).closest('.ui-select').find('.ui-select__visible span').text(value);
-    }
-
-  });
-
-  // handle outside click
-  $(document).click(function (e) {
-    var container = new Array();
-    container.push($('.ui-select'));
-
-    $.each(container, function(key, value) {
-        if (!$(value).is(e.target) && $(value).has(e.target).length === 0) {
-            $(value).removeClass('active');
-        }
-    });
-  });
 
   // textarea autoExpand
   $(document)

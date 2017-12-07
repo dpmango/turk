@@ -61,6 +61,7 @@
             right: 100%
 
   &__user
+    position: relative
     margin-left: auto
     display: flex
     align-items: center
@@ -80,13 +81,46 @@
         margin-left: 8px
         +tr
 
-      &__options
-        position: absolute
-
       &:hover
         .header__user-name,
         .ico-drop-selector
           color: $fontColor
+
+      &__options
+        min-width: 180px
+        position: fixed
+        // top, right to be sit with js
+        top: 0
+        right: 0
+        z-index: 20
+        background: white
+        margin: 0
+        padding: 20px 30px
+        box-shadow: 0 4px 10px 0 rgba(69,73,91,0.15)
+        border-radius: 4px
+        opacity: 0
+        transform: translate3d(0,25px,0)
+        pointer-events: none
+        transition: transform $transitionSpeed $ease, opacity $transitionSpeed $ease
+        &.is-active
+          opacity: 1
+          transform: translate3d(0,0,0)
+          pointer-events: all
+        li
+          display: block
+          padding: 8px 0
+          a
+            +tr
+            &:hover
+              color: $colorPrimary
+
+        hr
+          display: block
+          margin: 10px 0
+          border: 0
+          border-top: 1px solid rgba($borderColor, .5)
+
+
 
     &-name
       color: $colorPrimary
