@@ -165,30 +165,6 @@ $(document).ready(function(){
   //////////
   // MODALS
   //////////
-  // Custom modals
-  // $('*[data-modal]').on('click', function(){
-  //   // remove all active first
-  //   $('.modal').removeClass('opened');
-  //
-  //   // find by id
-  //   var target = $(this).data('modal');
-  //   $('#'+target).addClass('opened');
-  //
-  //   window.location.hash = target;
-  // });
-  //
-  // $('.modal__close').on('click', function(){
-  //   $(this).closest('.modal').removeClass('opened');
-  //   window.location.hash = "";
-  // });
-  //
-  // // CHECK SAVED STATE
-  // if(window.location.hash) {
-  //   var hash = window.location.hash.substring(1);
-  //   $('#'+hash).addClass('opened');
-  // }
-  //
-
 
   // Magnific Popup
   // var startWindowScroll = 0;
@@ -213,21 +189,6 @@ $(document).ready(function(){
       }
     }
   });
-
-  // $('.popup-gallery').magnificPopup({
-	// 	delegate: 'a',
-	// 	type: 'image',
-	// 	tLoading: 'Loading image #%curr%...',
-	// 	mainClass: 'mfp-img-mobile',
-	// 	gallery: {
-	// 		enabled: true,
-	// 		navigateByImgClick: true,
-	// 		preload: [0,1]
-	// 	},
-	// 	image: {
-	// 		tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
-	// 	}
-	// });
 
 
   ////////////
@@ -275,37 +236,16 @@ $(document).ready(function(){
     });
   });
 
-  // numeric input
-  $('.ui-number span').on('click', function(e){
-    var element = $(this).parent().find('input');
-    var currentValue = parseInt($(this).parent().find('input').val()) || 0;
-
-    if( $(this).data('action') == 'minus' ){
-      if(currentValue <= 1){
-        return false;
-      }else{
-        element.val( currentValue - 1 );
-      }
-    } else if( $(this).data('action') == 'plus' ){
-      if(currentValue >= 99){
-        return false;
-      } else{
-        element.val( currentValue + 1 );
-      }
-    }
-  });
-
-
   // textarea autoExpand
   $(document)
-    .one('focus.autoExpand', 'textarea.autoExpand', function(){
+    .one('focus.autoExpand', '.ui-group textarea', function(){
         var savedValue = this.value;
         this.value = '';
         this.baseScrollHeight = this.scrollHeight;
         this.value = savedValue;
     })
-    .on('input.autoExpand', 'textarea.autoExpand', function(){
-        var minRows = this.getAttribute('data-min-rows')|0, rows;
+    .on('input.autoExpand', '.ui-group textarea', function(){
+        var minRows = this.getAttribute('data-min-rows') || 0, rows;
         this.rows = minRows;
         rows = Math.ceil((this.scrollHeight - this.baseScrollHeight) / 17);
         this.rows = minRows + rows;
