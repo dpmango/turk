@@ -15,7 +15,7 @@
       font-size: 16px
       letter-spacing: 0.44px
       background: white
-      padding: 30px 20px
+      padding: 20px 20px
       border-bottom: 1px solid rgba(#E8E9EC, .2)
       +tr
     tr
@@ -58,6 +58,41 @@
       td
         padding: 20px !important
 
+
++r($desktop)
+  .p-table
+    margin-top: 20px
+    thead
+      td
+        font-size: 13px
+        padding: 20px 15px 15px 15px
+    tbody
+      td
+        font-size: 14px
+        padding: 15px
+    tr
+      td:first-child
+        padding-left: 20px
+
+    &__status
+      .icon
+        transform: scale(0.8)
+      span
+        margin-left: 8px
+
++r($mobile-s)
+  .p-table
+    thead
+      td
+        font-size: 12px
+        padding: 15px 10px 10px 10px
+    tbody
+      td
+        font-size: 13px
+        padding: 15px 10px
+    tr
+      td:first-child
+        padding-left: 15px
 
 // stacktable styles
 .stacktable

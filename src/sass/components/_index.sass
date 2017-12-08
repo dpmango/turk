@@ -16,11 +16,11 @@
 .page-title
   display: flex
   align-items: center
-  font-style: 26px
   color: #6B6F83
   padding-top: 35px
   span, h1
     display: inline-block
+    font-size: 26px
     margin: 0
     margin-left: 12px
   &__num
@@ -47,3 +47,31 @@
   background: white
   border: 1px solid #F4F5F9
   overflow: hidden
+
++r($desktop)
+  .page-title
+    padding-top: 0px
+    span, h1
+      font-size: 22px
+
+    &__num
+      font-size: 16px
+
++r($mobile)
+  .p-contanier
+    &__wrapper
+      margin-left: -30px
+      margin-right: -30px
+
+  .page-title
+    span, h1
+      font-size: 18px
+    &__num
+      font-size: 12px
+
+
++r($mobile-s)
+  .p-contanier
+    &__wrapper
+      margin-left: -20px
+      margin-right: -20px
