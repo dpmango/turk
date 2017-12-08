@@ -49,6 +49,7 @@
     font-size: 15px
 
   &--full
+    margin-top: 0
     margin-left: -61px
     margin-right: -61px
     margin-bottom: -61px
@@ -79,6 +80,21 @@
         transform: scale(0.8)
       span
         margin-left: 8px
+
+    &--full
+      margin-left: -41px
+      margin-right: -41px
+      margin-bottom: -41px
+      width: calc(100% + 82px)
+
++r($tablet)
+  .p-table
+    &--full
+      margin-left: -21px
+      margin-right: -21px
+      margin-bottom: -41px
+      width: calc(100% + 42px)
+
 
 +r($mobile-s)
   .p-table
