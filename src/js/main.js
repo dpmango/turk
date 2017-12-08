@@ -129,6 +129,8 @@ $(document).ready(function(){
   $('[js-hamburger]').on('click', function(){
     $('.hamburger').toggleClass('is-active');
     $('.mobile-navi').toggleClass('is-active');
+    $('.header').toggleClass('is-sticky');
+    $('body').toggleClass('is-fixed');
   });
 
   // HEADER DROPDOWN
@@ -296,8 +298,10 @@ $(document).ready(function(){
 
     // close mobile menu
     if ( _window.width() < bp.mobile ){
-      $('[js-hamburger]').toggleClass('is-active');
-      $('.mobile-navi').toggleClass('is-active');
+      $('[js-hamburger]').removeClass('is-active');
+      $('.mobile-navi').removeClass('is-active');
+      $('.header').removeClass('is-sticky');
+      $('body').removeClass('is-fixed');
     }
   });
 

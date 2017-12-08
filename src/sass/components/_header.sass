@@ -13,6 +13,13 @@
     padding-bottom: 12px
     z-index: 30
     box-shadow: 0 10px 14px 0 rgba(69,73,91,0.08)
+    .header__menu li a:not(.btn)::after
+      bottom: -10px
+      height: 4px
+  &.is-sticky
+    z-index: 30
+    box-shadow: 0 10px 14px 0 rgba(69,73,91,0.08)
+
   &__wrapper
     display: flex
     align-items: center
@@ -163,3 +170,57 @@
       display: none
     &__hamburger
       display: block
+
+
+// MOBILE MENU
+.mobile-navi
+  display: none
+  position: fixed 0
+  z-index: 25
+  background: white
+  display: flex
+  flex-direction: column
+  // opacity: 0
+  transform: translate3d(0,100%,0)
+  pointer-events: none
+  +tr
+  &.is-active
+    opacity: 1
+    transform: translate3d(0,0,0)
+    pointer-events: all
+
+  &__menu
+    flex: 1 1 auto
+    display: flex
+    flex-direction: column
+    align-items: center
+    list-style: none
+    padding: 120px 0 50px 0
+    overflow-y: auto
+    margin: auto 0
+    li
+      flex: 1 0 auto
+      margin: 20px 0
+    a
+      position: relative
+      font-size: 16px
+      +nunito
+      color: $colorPrimary
+      &::after
+        display: block
+        content: ' '
+        position: absolute
+        left: 0
+        right: 100%
+        bottom: -7px
+        background: $colorPrimary
+        height: 3px
+        transition: right $transitionSpeed $ease
+        +tr
+      &:hover
+        &::after
+          right: 0
+
++r($mobile)
+  .mobile-navi
+    display: flex
