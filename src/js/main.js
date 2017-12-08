@@ -56,12 +56,11 @@ $(document).ready(function(){
   svg4everybody();
 
   // Viewport units buggyfill
-  window.viewportUnitsBuggyfill.init({
-    force: true,
-    hacks: window.viewportUnitsBuggyfillHacks,
-    refreshDebounceWait: 250,
-    appendToBody: true
-  });
+  // window.viewportUnitsBuggyfill.init({
+  //   force: false,
+  //   refreshDebounceWait: 250,
+  //   appendToBody: true
+  // });
 
 
  	// Prevent # behavior
