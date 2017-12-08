@@ -1,0 +1,60 @@
+---
+title: CSV
+---
+extends shared/_layout
+block content
+  
+  .p-contanier
+    .container
+      
+      
+  
+      
+      // summary
+      .report__summary
+        a(href="submissions.html").page-back
+          .icon.icon-arrow-back
+          span Report Summary
+        .report__summary-col
+          .report__summary-head batch id
+          .report__summary-text 1020
+        .report__summary-col
+          .report__summary-head batch
+          .report__summary-text Monday June 12th 2017 11:00AM PST
+        .report__summary-col
+          .report__summary-head 
+          a(href="#").report__summary-text
+            +icon('ico-download')
+        .report__summary-label.report__summary-label--green success
+        
+        
+      
+            
+    // CSV
+    .csv-box
+        
+      .xml-code
+        pre
+          xmp.
+            <?xml version=«1.0» encoding=«UTF-8» ?>
+            <OrdersList>
+              <SendOrder date=«1486019811» nomber=«63723» price_sum=«6940» weight_sum=«800»>
+                <UserInfo>
+                  <family>Name</family>
+                  <name>Surename</name>
+                  <patronymic>Patronimic</patronymic>
+                  <phone>04656565242</phone>
+                  <email>test@gmail.com</email>
+                </UserInfo>
+                <Delivery>
+                  <transport_companies>4</transport_companies>
+                  <city_id>0a7e138b-7c55-4745-8a75-0441df4d3432</city_id>
+                  <delivery_points_id>900305</delivery_points_id>
+                  <price_delivery>400</price_delivery>
+                </Delivery>
+                <Commentary></Commentary>
+                <Items>
+                  <Item article_product=«00122000» title=«Some really really long title goes here just for testing purposes» count=«1» price=«6940»/>
+                </Items>
+              </SendOrder>
+            </OrdersList>

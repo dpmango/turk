@@ -10,6 +10,9 @@
       pointer-events: none
       .report__tab
         color: #DFE1EE
+        &.is-active
+          color: #DFE1EE
+
     &--left
       justify-content: left
       .report__tab
@@ -30,6 +33,10 @@
     font-size: 20px
     margin: 0 5%
     color: #656AEB
+    &:first-child
+      margin-left: 0
+    &:last-child
+      margin-right: 0
     &::after
       display: block
       content: ' '
@@ -102,6 +109,9 @@
       &--red
         color: white
         background: $colorRed
+      &--green
+        color: white
+        background: $colorGreen
 
   &__top
     margin-top: 70px
@@ -163,6 +173,9 @@
 +r($desktop)
   .report
     padding: 40px 40px 60px 40px
+    &__tab
+      font-size: 18px
+
     &__summary
       flex-wrap: wrap
       justify-content: flex-start
@@ -197,9 +210,17 @@
 +r($tablet)
   .report
     padding: 40px 20px
+    &__tabs
+      flex-direction: column
+    &__tab
+      width: auto
+      margin: 0 0 25px 0
 
 +r($mobile)
   .report
+    &__tab
+      font-size: 16px
+
     &__summary
       &-text
         font-size: 16px
@@ -233,6 +254,27 @@
     margin-top: 40px
     img
       max-width: 100%
+
++r($tablet)
+  .report-blank
+    &__title
+      font-size: 22px
+    &__description
+      font-size: 20px
+
++r($mobile)
+  .report-blank
+    &__title
+      font-size: 20px
+    &__description
+      font-size: 18px
+
++r($mobile-s)
+  .report-blank
+    &__title
+      font-size: 18px
+    &__description
+      font-size: 16px
 
 .report-container
   max-width: 620px
