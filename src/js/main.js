@@ -190,6 +190,11 @@ $(document).ready(function(){
 
 
   ////////////
+  // STACKTABLE
+  ////////////
+  $('[js-stacktable]').stacktable();
+
+  ////////////
   // UI
   ////////////
 

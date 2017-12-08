@@ -57,3 +57,36 @@
     tbody
       td
         padding: 20px !important
+
+
+// stacktable styles
+.stacktable
+  width: 100%
+
+.st-head-row
+  padding: 20px 0
+  &.st-head-row-main
+    display: none
+    font-size: 1.5em
+    padding-top: 0
+
+.st-key
+  width: 49%
+  padding-right: 1%
+
+.st-val
+  width: 49%
+  padding-left: 1%
+
+.stacktable
+  &.large-only
+    display: table
+  &.small-only
+    display: none
+
++r($tablet)
+  .stacktable
+    &.large-only
+      display: none
+    &.small-only
+      display: table
