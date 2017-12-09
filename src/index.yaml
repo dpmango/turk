@@ -6,9 +6,9 @@ PageList:
 - file: new-batch.html
   ready: 85
 - file: report.html
-  ready: 60
+  ready: 85
 - file: report-progress.html
-  ready: 60
+  ready: 85
 
 - file: field-level.html
   ready: 60

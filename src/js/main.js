@@ -217,6 +217,22 @@ $(document).ready(function(){
   }
 
   ////////////
+  // PERFECT SCROLLBAR
+  ////////////
+
+  $('[js-scrollbar]').each(function(i, scrollbar){
+    var _this = scrollbar;
+
+    var ps = new PerfectScrollbar(_this, {
+      wheelSpeed: 2,
+      wheelPropagation: true,
+      maxScrollbarLength: 100,
+      suppressScrollY: true
+    });
+  })
+
+
+  ////////////
   // LOAD MORE
   ////////////
   $(document).on('click', '[js-load-more]', function(e){

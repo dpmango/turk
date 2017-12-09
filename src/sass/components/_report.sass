@@ -1,14 +1,16 @@
 
-// REPORT
+/* REPORT
 .report
   padding: 60px
   &__tabs
     position: relative
     display: flex
-    justify-content: center
+    margin-top: 30px
+    // overflow-x: auto
     &--disabled
-      pointer-events: none
+      // pointer-events: none
       .report__tab
+        pointer-events: none
         color: #DFE1EE
         &.is-active
           color: #DFE1EE
@@ -28,15 +30,16 @@
       height: 1px
       background: rgba(#E8E9EC, .5)
   &__tab
+    flex: 0 0 auto
     position: relative
     display: inline-block
     font-size: 20px
     margin: 0 5%
     color: #656AEB
     &:first-child
-      margin-left: 0
+      margin-left: auto
     &:last-child
-      margin-right: 0
+      margin-right: auto
     &::after
       display: block
       content: ' '
@@ -54,7 +57,7 @@
         right: 0
 
   &__top
-    margin-top: 70px
+    margin-top: 60px
     display: flex
     border-bottom: 1px solid rgba(#E8E9EC, .5)
     padding-bottom: 30px
@@ -209,14 +212,41 @@
       //   &--red
       //     font-size: 23px
 
+    &__top
+      &-percent
+        font-size: 28px
+      &-description
+        font-size: 18px
+      &-stars
+        font-size: 21px
+
+    &__view
+      margin-top: 25px
+      &-title
+        font-size: 18px
+      &-link
+        margin-top: 20px
+        .ico
+          font-size: 24px
+        span
+          font-size: 18px
+
 +r($tablet)
   .report
     padding: 40px 20px
-    &__tabs
+    // &__tabs
+    //   flex-direction: column
+    // &__tab
+    //   width: auto
+    //   margin: 0 0 25px 0
+    &__top
       flex-direction: column
-    &__tab
-      width: auto
-      margin: 0 0 25px 0
+      margin-top: 40px
+      padding-bottom: 10px
+      &-col
+        flex: 0 0 auto
+        padding-right: 0
+        margin-bottom: 25px
 
 +r($mobile)
   .report
@@ -231,6 +261,26 @@
       &__label
         font-size: 12px
         padding: 6px 12px
+
+    &__top
+      &-percent
+        font-size: 24px
+      &-description
+        font-size: 16px
+      &-stars
+        font-size: 18px
+
+    &__view
+      &-title
+        font-size: 16px
+      &-link
+        margin-top: 20px
+        .ico
+          font-size: 20px
+        span
+          font-size: 15px
+
+
 
 
 // report blank
