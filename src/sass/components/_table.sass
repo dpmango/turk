@@ -26,7 +26,12 @@
           background: #FAFBFB
       &[js-modal]
         cursor: pointer
-        
+
+      &.p-table__status-warn
+        &:hover
+          td
+            color: $colorRed
+
   &__icon-td
     display: flex
     align-items: center
@@ -58,9 +63,9 @@
     margin-bottom: -61px
     width: calc(100% + 122px)
     border-top: 0
-    tbody
-      td
-        padding: 20px !important
+    // tbody
+    //   td
+    //     padding: 20px !important
 
 
 +r($desktop)
@@ -87,7 +92,7 @@
     &--full
       margin-left: -41px
       margin-right: -41px
-      margin-bottom: -41px
+      margin-bottom: -61px
       width: calc(100% + 82px)
 
 +r($tablet)
