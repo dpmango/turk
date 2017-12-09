@@ -216,6 +216,31 @@ $(document).ready(function(){
     $('[js-stacktable]').stacktable();
   }
 
+  ////////////
+  // LOAD MORE
+  ////////////
+  $(document).on('click', '[js-load-more]', function(e){
+    // some fake functionality
+    // just should be doing some ajax here instead
+
+    var table, rows;
+    if ( _window.width() > bp.tablet ){
+      table = _document.find('table.large-only')
+    } else {
+      table = _document.find('table.small-only');
+    }
+
+    rows = table.find('tbody tr').clone(true);
+
+    rows.each(function(i, row){
+      $(table).append(row);
+      // .hide().slideDown();
+    });
+
+    // initStackTable();
+    e.preventDefault();
+  })
+
   //////////
   // TOGGLE PLUGIN
   //////////
