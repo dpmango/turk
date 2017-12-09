@@ -17,4 +17,4 @@ PageList:
 - file: criteria-scores.html
   ready: 85
 - file: csv.html
-  ready: 25
+  ready: 40

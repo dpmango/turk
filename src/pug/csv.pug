@@ -2,16 +2,16 @@
 title: CSV
 ---
 extends shared/_layout
+
+block header
+  include components/_header-csv
+  
 block content
   
   .p-contanier
     .container
-      
-      
-  
-      
       // summary
-      .report-summary
+      .report-summary.report-summary--csv
         a(href="submissions.html").page-back
           .icon.icon-arrow-back
           span Report Summary
@@ -21,18 +21,12 @@ block content
         .report-summary__col
           .report-summary__head batch
           .report-summary__text Monday June 12th 2017 11:00AM PST
-        .report-summary__col
-          .report-summary__head 
-          a(href="#").report-summary__text
-            +icon('ico-download')
+            a(href="#")
+              +icon('ico-download')
         .report-summary__label.report-summary__label--green success
-        
-        
-      
             
     // CSV
     .csv-box
-        
       .xml-code
         pre
           xmp.

@@ -122,6 +122,7 @@
     &:last-child
       padding-right: 0
   &__head
+    display: block
     font-size: 12px
     text-transform: uppercase
     font-weight: 700
@@ -134,13 +135,14 @@
     +nunito
     font-size: 22px
     color: #6B6F83
+    a
+      margin-left: 10px
     &--red
       font-size: 26px
       color: $colorRed
     .ico
       color: #C0C4D3
-
-  a.report__summary-text
+  a.report-summary__text
     +tr
     .ico
       +tr
@@ -167,6 +169,9 @@
       color: white
       background: $colorGreen
 
+  .page-back
+    margin-right: 30px
+
 +r(1250)
   .report
     &-summary
@@ -185,25 +190,33 @@
       flex-wrap: wrap
       justify-content: flex-start
       margin-bottom: -10px
+      &--csv
+        justify-content: space-between
+
       &__col
         flex: 0 1 auto
         padding-left: 0
         padding-right: 15px
         margin-bottom: 20px
-        &:nth-child(1)
-          order: 1
-        &:nth-child(3)
-          order: 3
-        &:nth-child(4)
-          order: 2
-          margin-right: auto
-        &:nth-child(5)
-          order: 5
       &__label
-        order: 2
         margin-left: 15px
         margin-right: 15px
         margin-bottom: 23px
+      &:not(.report-summary--csv)
+        .report-summary
+          &__col
+            &:nth-child(1)
+              order: 1
+            &:nth-child(3)
+              order: 3
+            &:nth-child(4)
+              order: 2
+              margin-right: auto
+            &:nth-child(5)
+              order: 5
+
+          &__label
+            order: 2
 
       &-head
 
@@ -234,11 +247,15 @@
 +r($tablet)
   .report
     padding: 40px 20px
-    // &__tabs
-    //   flex-direction: column
-    // &__tab
-    //   width: auto
-    //   margin: 0 0 25px 0
+
+    &-summary
+      .page-back
+        flex: 0 0 100%
+        margin-bottom: 30px
+      &--csv
+        justify-content: flex-start
+
+
     &__top
       flex-direction: column
       margin-top: 40px
