@@ -294,6 +294,7 @@ $(document).ready(function(){
     var file_api = ( window.File && window.FileReader && window.FileList && window.Blob ) ? true : false;
 
     var uploader = $('[js-uploader]');
+    var valid_ext = uploader.attr('data-validate');
     var uploaderFile = uploader.find('input');
     var uploaderText = uploader.find('.uploader__current-filename');
     var uploaderTag = uploader.find('.uploader__current');
@@ -310,14 +311,15 @@ $(document).ready(function(){
           return false
         }
 
-        var file_arr = file_name.split('.');
-        var ext = file_arr[file_arr.length - 1]
-        console.log(ext)
-        if( ext !== "csv" ){
-          // alert('Please select csv file')
-          $('.uploader-error').remove();
-          uploader.prev().append("<div class='uploader-error'>Please select csv file</div>")
-          return false
+        if ( valid_ext ){
+          var file_arr = file_name.split('.');
+          var ext = file_arr[file_arr.length - 1]
+          if( ext !== valid_ext ){
+            // alert('Please select csv file')
+            $('.uploader-error').remove();
+            uploader.prev().append("<div class='uploader-error'>Please select ."+valid_ext+" file</div>")
+            return false
+          }
         }
 
         $('.uploader-error').remove();
