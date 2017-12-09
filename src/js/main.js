@@ -167,7 +167,7 @@ $(document).ready(function(){
 
   // Magnific Popup
   // var startWindowScroll = 0;
-  $('.js-popup').magnificPopup({
+  $('[js-modal]').magnificPopup({
     type: 'inline',
     fixedContentPos: true,
     fixedBgPos: true,
@@ -194,6 +194,35 @@ $(document).ready(function(){
   // STACKTABLE
   ////////////
   $('[js-stacktable]').stacktable();
+
+
+  //////////
+  // TOGGLE PLUGIN
+  //////////
+  $('[js-toggle]').each(function(i, toggle){
+    var _this = $(toggle);
+
+    var anchor = _this.find('[js-toggle-anchor]');
+    var anchorTextHidden = anchor.attr('data-toggle-hidden');
+    var anchorTextVisible = anchor.attr('data-toggle-visible');
+    var dropdown = _this.find('[js-toggle-drop]');
+
+    anchor.on('click', function(e){
+      var openState = _this.attr('data-toggle-opened');
+
+      if ( openState == 0 ){
+        anchor.find('span').text(anchorTextVisible)
+        dropdown.slideDown(250);
+        _this.attr('data-toggle-opened', 1);
+      } else if ( openState == 1 ) {
+        anchor.find('span').text(anchorTextHidden)
+        dropdown.slideUp(250);
+        _this.attr('data-toggle-opened', 0);
+      }
+      e.preventDefault();
+    })
+
+  })
 
   ////////////
   // UI

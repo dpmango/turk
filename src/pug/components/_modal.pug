@@ -1,0 +1,24 @@
+// MODALS
+.popup-dialog.mfp-hide#modal-1
+  .container
+    .popup-info
+      .popup-info__col
+        .popup-info__head criteria id
+        .popup-info__text 71
+      .popup-info__col
+        .popup-info__head error type
+        .popup-info__text Keyword Blacklist Match
+        .popup-info__stopword “Gangstar”
+      .popup-info__col.popup-info__col--shrink
+        .popup-info__head rule
+        .popup-info__rule Field ID “#71 contains the value <b>“gangstar”</b>, which matches the blacklisted keyword <b>“gang”</b>.
+        form(action="#" js-toggle data-toggle-opened=0).popup-info__keylist
+          .popup-info__keylist-anchor.hover-link(js-toggle-anchor data-toggle-visible="Hide keyword blacklist" data-toggle-hidden="View keyword blacklist")
+            span View keyword blacklist
+          .popup-info__keylist-textarea(js-toggle-drop)
+            .ui-group.ui-group--no-m
+              textarea(placeholder="Keyword blacklist" value="gangstar, gangster, gang")
+              
+    .popup-btn
+      a(href="csv.html").btn.btn-more
+        span View errors in csv file

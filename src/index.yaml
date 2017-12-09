@@ -1,4 +1,4 @@
-ProjectTitle: Muscial Turk
+ProjectTitle: Musical Turk
 
 PageList:
 - file: submissions.html
@@ -6,15 +6,15 @@ PageList:
 - file: new-batch.html
   ready: 75
 - file: report.html
-  ready: 50
+  ready: 60
 - file: report-progress.html
-  ready: 50
+  ready: 60
 
 - file: field-level.html
   ready: 60
 - file: row-scores.html
-  ready: 45
+  ready: 60
 - file: criteria-scores.html
-  ready: 45
+  ready: 60
 - file: csv.html
   ready: 25

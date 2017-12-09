@@ -75,3 +75,21 @@
     &__wrapper
       margin-left: -20px
       margin-right: -20px
+
+
+.hover-link
+  span
+    position: relative
+    &::after
+      display: block
+      content: ' '
+      position: absolute
+      left: 0
+      right: 100%
+      bottom: -7px
+      background: currentColor
+      height: 3px
+      transition: right $transitionSpeed $ease
+    &:hover
+      &::after
+        right: 0
