@@ -300,13 +300,27 @@ $(document).ready(function(){
 
     uploaderFile.on('change', function(){
         var file_name;
-        if( file_api && uploaderFile[ 0 ].files[ 0 ] )
+        if( file_api && uploaderFile[ 0 ].files[ 0 ] ){
             file_name = uploaderFile[ 0 ].files[ 0 ].name;
-        else
+        }else{
             file_name = uploaderFile.val().replace( "C:\\fakepath\\", '' );
+        }
 
-        if( ! file_name.length )
-            return;
+        if( ! file_name.length ){
+          return false
+        }
+
+        var file_arr = file_name.split('.');
+        var ext = file_arr[file_arr.length - 1]
+        console.log(ext)
+        if( ext !== "csv" ){
+          // alert('Please select csv file')
+          $('.uploader-error').remove();
+          uploader.prev().append("<div class='uploader-error'>Please select csv file</div>")
+          return false
+        }
+
+        $('.uploader-error').remove();
 
         uploaderText.text(file_name);
         uploaderTag.addClass('has-file');
