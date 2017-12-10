@@ -55,14 +55,6 @@ $(document).ready(function(){
   // svg support for laggy browsers
   svg4everybody();
 
-  // Viewport units buggyfill
-  // window.viewportUnitsBuggyfill.init({
-  //   force: false,
-  //   refreshDebounceWait: 250,
-  //   appendToBody: true
-  // });
-
-
  	// Prevent # behavior
 	$(document).on('click', '[href="#"]', function(e) {
 		e.preventDefault();

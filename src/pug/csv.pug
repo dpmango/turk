@@ -1,20 +1,22 @@
 ---
 title: CSV
+bodyClass: csv
 ---
 extends shared/_layout
 
-block header
-  include components/_header-csv
-  
 block content
-  
-  .p-contanier
+  // add this class to make header static (not sticky)
+  // sticky might break header layout on this page
+  .header-static
+    
+  // CSV container with white BG
+  .p-csv
     .container
       // summary
       .report-summary.report-summary--csv
         a(href="submissions.html").page-back
           .icon.icon-arrow-back
-          span Report Summary
+          span back to report
         .report-summary__col
           .report-summary__head batch id
           .report-summary__text 1020
@@ -24,31 +26,32 @@ block content
             a(href="#")
               +icon('ico-download')
         .report-summary__label.report-summary__label--green success
-            
-    // CSV
-    .csv-box
-      .xml-code
-        pre
-          xmp.
-            <?xml version=«1.0» encoding=«UTF-8» ?>
-            <OrdersList>
-              <SendOrder date=«1486019811» nomber=«63723» price_sum=«6940» weight_sum=«800»>
-                <UserInfo>
-                  <family>Name</family>
-                  <name>Surename</name>
-                  <patronymic>Patronimic</patronymic>
-                  <phone>04656565242</phone>
-                  <email>test@gmail.com</email>
-                </UserInfo>
-                <Delivery>
-                  <transport_companies>4</transport_companies>
-                  <city_id>0a7e138b-7c55-4745-8a75-0441df4d3432</city_id>
-                  <delivery_points_id>900305</delivery_points_id>
-                  <price_delivery>400</price_delivery>
-                </Delivery>
-                <Commentary></Commentary>
-                <Items>
-                  <Item article_product=«00122000» title=«Some really really long title goes here just for testing purposes» count=«1» price=«6940»/>
-                </Items>
-              </SendOrder>
-            </OrdersList>
+          
+  // CSV
+  .csv-box
+    .csv-box__placeholder CSV
+    .xml-code
+      pre
+        xmp.
+          <?xml version=«1.0» encoding=«UTF-8» ?>
+          <OrdersList>
+            <SendOrder date=«1486019811» nomber=«63723» price_sum=«6940» weight_sum=«800»>
+              <UserInfo>
+                <family>Name</family>
+                <name>Surename</name>
+                <patronymic>Patronimic</patronymic>
+                <phone>04656565242</phone>
+                <email>test@gmail.com</email>
+              </UserInfo>
+              <Delivery>
+                <transport_companies>4</transport_companies>
+                <city_id>0a7e138b-7c55-4745-8a75-0441df4d3432</city_id>
+                <delivery_points_id>900305</delivery_points_id>
+                <price_delivery>400</price_delivery>
+              </Delivery>
+              <Commentary></Commentary>
+              <Items>
+                <Item article_product=«00122000» title=«Some really really long title goes here just for testing purposes» count=«1» price=«6940»/>
+              </Items>
+            </SendOrder>
+          </OrdersList>

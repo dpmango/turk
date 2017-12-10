@@ -163,7 +163,7 @@
       color: #C0C4D3
       font-size: 27px
       margin-bottom: -8px
-  a.report-summary__text
+  a.report-summary__text, a
     +tr
     .ico
       +tr
@@ -188,10 +188,22 @@
       background: $colorRed
     &--green
       color: white
+      font-size: 14px
+      letter-spacing: 1px
+      border-radius: 0px
+      padding-left: 25px
+      padding-right: 25px
       background: $colorGreen
 
   .page-back
-    margin-right: 30px
+    margin-right: auto
+  &--csv
+    .report-summary__label
+      margin-left: auto
+      margin-right: 0
+    .report-summary__text
+      .ico
+        transform: translateY(-8px)
 
 +r(1250)
   .report
@@ -286,7 +298,11 @@
         flex: 0 0 100%
         margin-bottom: 30px
       &--csv
-        justify-content: flex-start
+        .report-summary__label
+          margin-left: 0
+        .report-summary__text
+          .ico
+            transform: translateY(0px)
 
 
     &__top

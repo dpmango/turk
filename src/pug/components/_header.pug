@@ -20,12 +20,13 @@ header.header
           .header__user-name Johnathan
           +icon('ico-drop-selector')
         
-            
       .header__hamburger(js-hamburger)
         .hamburger.hamburger--squeeze
           .hamburger-box
             .hamburger-inner
-            
+
+// header user dropdown
+// should be positioned outside header to prevent z-index conflicts          
 ul.header__user-drop__options(js-header-dropdown-list)
   li
     a(href="#") Profile

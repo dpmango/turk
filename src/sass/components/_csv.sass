@@ -1,13 +1,49 @@
 /* CSV
 
+.p-csv
+  padding-top: 15px
+  padding-bottom: 10px
+  background: white
+
+
+/* csv is body added class
 .csv
+  .header
+    padding-bottom: 50px
+  .page__content
+    padding-top: 120px
+
+  /* componenets
   &-box
+    position: relative
     background: #F9FAFD
     border: 1px solid #9CA2FF
-    margin: 20px
+    margin: 30px 25px
+    &__placeholder
+      position: absolute
+      top: 20%
+      left: 0
+      right: 0
+      text-align: center
+      +nunito
+      font-weight: 700
+      font-size: 138px
+      letter-spacing: 8px
+      color: #E4E5EC
+      pointer-events: none
+
++r($mobile)
+  .csv
+    .header
+      padding-bottom: 20px
+
+    .page__content
+      padding-top: 80px
 
 .xml-code
   overflow-x: scroll
+  pointer-events: none
+  opacity: .3
 
 .xml-code pre, .xml-code xmp
   margin: 0
@@ -19,7 +55,7 @@
     &-box
       margin: 20px 0
       border-left: 0
-      borde-right: 0
+      border-right: 0
 
   .xml-code pre, .xml-code xmp
     padding: 0 15px
