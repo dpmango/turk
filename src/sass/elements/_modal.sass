@@ -1,4 +1,4 @@
-// Styles for dialog window
+/* Styles for dialog window
 .mfp-wrap
   -webkit-overflow-scrolling: touch
   -webkit-transform: translateZ(0)
@@ -10,6 +10,29 @@ html.mfp-helper
     height: 100%
     -webkit-transform: translateZ(0)
 
+/* Fade-zoom animation
+.popup-buble
+  .popup-dialog
+    opacity: 0
+    transition: all 0.2s ease-in-out
+    transform: translate3d(0,75%,0)
+  &.mfp-ready .popup-dialog
+    opacity: 1
+    transform: translate3d(0,0%,0)
+  &.mfp-removing .popup-dialog
+    transform: translate3d(0,75%,0)
+    opacity: 0
+  &.mfp-bg
+    background: white
+    opacity: 0
+    transition: opacity 0.3s $ease
+  &.mfp-ready.mfp-bg
+    opacity: 1
+  &.mfp-removing.mfp-bg
+    opacity: 0
+
+
+/* The container outside content (popup-info)
 .popup-dialog
   background: white
   padding: 60px 0px
@@ -21,6 +44,12 @@ html.mfp-helper
     right: 40px
     top: 0px
 
++r($mobile)
+.popup-dialog
+  .mfp-close
+    right: 0
+
+/* POPUP INFO
 .popup-info
   display: flex
   border-top: 1px solid rgba(#E8E9EC, .2)
@@ -64,12 +93,13 @@ html.mfp-helper
     color: #898EA2
     line-height: 1.375
   &__stopword
-    margin-top: 30px
+    margin-top: 35px
+    margin-left: 15px
     font-size: 32px
     font-style: italic
     color: $colorRed
   &__keylist
-    margin-top: 30px
+    margin-top: 35px
     &-anchor
       font-size: 16px
       color: $colorPrimary
@@ -79,7 +109,10 @@ html.mfp-helper
       margin-top: 20px
 
 .popup-btn
-  margin-top: 50px
+  margin-top: 40px
+  .btn
+    padding-left: 25px
+    padding-right: 25px
 
 +r($tablet)
   .popup-info
@@ -97,47 +130,3 @@ html.mfp-helper
 
   .popup-btn
     margin-top: 30px
-
-// Fade-zoom animation for first dialog
-
-.popup-buble
-  .popup-dialog
-    opacity: 0
-    transition: all 0.2s ease-in-out
-    transform: translate3d(0,75%,0)
-  &.mfp-ready .popup-dialog
-    opacity: 1
-    transform: translate3d(0,0%,0)
-  &.mfp-removing .popup-dialog
-    transform: translate3d(0,75%,0)
-    opacity: 0
-  &.mfp-bg
-    background: white
-    opacity: 0
-    transition: opacity 0.3s $ease
-  &.mfp-ready.mfp-bg
-    opacity: 1
-  &.mfp-removing.mfp-bg
-    opacity: 0
-
-
-
-// Fade-move animation
-.my-mfp-slide-bottom
-  .zoom-anim-dialog
-    opacity: 0
-    transition: all 0.2s ease-out
-    transform: translateY(-20px) perspective(600px) rotateX(10deg)
-  &.mfp-ready .zoom-anim-dialog
-    opacity: 1
-    transform: translateY(0) perspective(600px) rotateX(0)
-  &.mfp-removing .zoom-anim-dialog
-    opacity: 0
-    transform: translateY(-10px) perspective(600px) rotateX(10deg)
-  &.mfp-bg
-    opacity: 0
-    transition: opacity 0.3s ease-out
-  &.mfp-ready.mfp-bg
-    opacity: 0.8
-  &.mfp-removing.mfp-bg
-    opacity: 0

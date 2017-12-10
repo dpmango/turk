@@ -11,10 +11,10 @@ PageList:
   ready: 100
 
 - file: field-level.html
-  ready: 85
+  ready: 100
 - file: row-scores.html
-  ready: 85
+  ready: 100
 - file: criteria-scores.html
-  ready: 85
+  ready: 100
 - file: csv.html
   ready: 40

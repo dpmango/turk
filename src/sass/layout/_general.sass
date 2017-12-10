@@ -1,3 +1,4 @@
+/* Some resets
 *
   box-sizing: border-box
   outline: none
@@ -13,6 +14,7 @@ ul
   li
     display: inline-block
 
+/* General body class
 body, html
   position: relative
   background: #F4F5FA
@@ -44,6 +46,8 @@ body.is-fixed .page
     &__content
       padding-top: 100px
 
+/* Container and modifiers
+/* mind the padding's for max-width - (padding left + padding right)
 .container
   max-width: 1250px
   margin-left: auto
@@ -59,7 +63,6 @@ body.is-fixed .page
   .container
     padding-left: 30px
     padding-right: 30px
-
 
 +r($mobile-s)
   .container

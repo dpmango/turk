@@ -58,15 +58,13 @@
     font-size: 15px
 
   &--full
-    margin-top: 0
-    margin-left: -61px
-    margin-right: -61px
+    margin-top: 1px
+    margin-left: -63px
+    margin-right: -63px
     margin-bottom: -61px
-    width: calc(100% + 122px)
+    width: calc(100% + 126px)
     border-top: 0
-    // tbody
-    //   td
-    //     padding: 20px !important
+
 
 +rmin($tablet)
   .p-table
@@ -77,6 +75,11 @@
             width: 125px
           &:nth-child(2)
             width: 210px
+    &--full
+      tr
+        td
+          &:first-child
+            width: 7%
 
 +r($desktop)
   .p-table
