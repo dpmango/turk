@@ -8,17 +8,19 @@ block content
     .container
       .p-contanier__wrapper
         .container.container--smaller
-
+          
+          // page back
           a(href="submissions.html").page-back
             .icon.icon-arrow-back
             span Report Summary
-      
+            
+          // report box
           .p-box.report
             // summary
             .report-summary
               .report-summary__col
                 .report-summary__head risk analysis
-                .report-summary__text.report-summary__text--red Errors per row 
+                .report-summary__text.report-summary__text--red Errors Per Row 
               .report-summary__label.report-summary__label--red failed
               .report-summary__col
                 .report-summary__head batch id
@@ -31,7 +33,7 @@ block content
                 a(href="#").report-summary__text
                   +icon('ico-download')
             
-            //tabs
+            // tabs
             .report__tabs.report__tabs--left(js-scrollbar)
               a(href="#").report__tab Overall Risk Assessment
               a(href="#").report__tab.is-active Apple & Itunes Guidelines
@@ -53,6 +55,7 @@ block content
                     +icon('ico-star-empty')
                   .report__top-description Overall data quality
               
+              // report view
               .report__view
                 .report__view-title What are the biggest problems with the dataset?
                 a(href="#").report__view-link

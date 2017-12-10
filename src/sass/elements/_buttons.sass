@@ -20,6 +20,7 @@ button
     width: 100%
 
   &-primary, &-more
+    overflow: hidden
     span
       position: relative
       z-index: 2
@@ -39,13 +40,13 @@ button
       +tr
     &:hover
       &::after
-        width: 100%
-        height: 100%
+        width: 110%
+        height: 110%
         opacity: 1
       span
         color: white
   &-primary
-    padding: 8px 15px
+    padding: 9px 20px
     font-size: 15px
     font-weight: 600
     letter-spacing: 0.58px
@@ -57,7 +58,7 @@ button
     border: 1px solid $colorPrimary
 
   &-more
-    padding: 14px 50px
+    padding: 13px 50px
     font-size: 16px
     text-align: center
     +nunito
@@ -66,9 +67,10 @@ button
     border: 1px solid $colorPrimary
 
   &--filled
+    min-width: 165px
     &::after
-      width: 100%
-      height: 100%
+      width: 110%
+      height: 110%
       opacity: 1
     span
       color: white
@@ -79,3 +81,14 @@ button
         width: 10%
         height: 10%
         opacity: 0
+
+
++r($tablet)
+  .btn
+    &-primary
+      padding: 8px 20px
+      font-size: 13px
+
+    &-more
+      padding: 11px 35px
+      font-size: 14px

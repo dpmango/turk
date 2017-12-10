@@ -71,7 +71,6 @@ $(document).ready(function(){
   // triggered each time PJAX DONE or first page load
   function pageReady(){
     revealFooter();
-    _window.on('resize', debounce(revealFooter, 100));
 
     headerSticky();
     setHeaderActiveClass();
@@ -80,6 +79,7 @@ $(document).ready(function(){
     initStackTable();
 
     initTogglePlugin();
+    initTextareaExpand();
     initFileUpload();
   }
 
@@ -91,7 +91,7 @@ $(document).ready(function(){
     if (footer.length > 0) {
       var footerHeight = footer.outerHeight();
       var maxHeight = _window.height() - footerHeight > 100;
-      if (maxHeight && !msieversion() ) {
+      if (maxHeight && !msieversion() && _window.width() > bp.tablet ) {
         $('body').css({
           'margin-bottom': footerHeight
         });
@@ -109,6 +109,7 @@ $(document).ready(function(){
         });
       }
     }
+    _window.on('resize', debounce(revealFooter, 100));
   }
 
   // HEADER SCROLL
@@ -130,6 +131,13 @@ $(document).ready(function(){
         }
 
       }, 10));
+
+      _window.on('scroll', throttle(function(e){
+        $('[js-header-dropdown-list]').removeClass('is-active');
+      }, 100, {
+        'leading': true
+      }))
+
     }
   }
 
@@ -150,21 +158,26 @@ $(document).ready(function(){
 
   // HEADER DROPDOWN
   $(document)
-    .on('click', '[js-header-dropdown]', function(){
+    .on('click', '[js-header-dropdown]', function(e){
       var pos = $(this).offset();
       var dropdown = $('[js-header-dropdown-list]');
+      console.log(pos)
 
       dropdown.css({
-        top: pos.top + $(this).outerHeight() + 20,
+        top: pos.top - _window.scrollTop() + ( $(this).outerHeight() + 25 ),
         right: _window.width() - (pos.left + $(this).outerWidth())
       })
-      dropdown.addClass('is-active');
-    })
-    .on('click', '.page__content', function(){
-      $('[js-header-dropdown-list]').removeClass('is-active');
-    })
+      dropdown.toggleClass('is-active');
 
-
+      e.stopPropagation()
+    })
+    .on('click', function(e){
+      if(!$(event.target).closest('[js-header-dropdown-list]').length) {
+        if( $('[js-header-dropdown-list]').is(".is-active")) {
+          $('[js-header-dropdown-list]').removeClass('is-active');
+        }
+      }
+    });
 
   // SET ACTIVE CLASS IN HEADER
   // * could be removed in production and server side rendering
@@ -291,19 +304,31 @@ $(document).ready(function(){
   ////////////
 
   // textarea autoExpand
-  $(document)
-    .one('focus.autoExpand', '.ui-group textarea', function(){
-        var savedValue = this.value;
-        this.value = '';
-        this.baseScrollHeight = this.scrollHeight;
-        this.value = savedValue;
-    })
-    .on('input.autoExpand', '.ui-group textarea', function(){
-        var minRows = this.getAttribute('data-min-rows') || 0, rows;
-        this.rows = minRows;
-        rows = Math.ceil((this.scrollHeight - this.baseScrollHeight) / 17);
-        this.rows = minRows + rows;
-    });
+  // $(document)
+  //   .one('focus.autoExpand', '.ui-group textarea', function(){
+  //       var savedValue = this.value;
+  //       this.value = '';
+  //       this.baseScrollHeight = this.scrollHeight;
+  //       this.value = savedValue;
+  //   })
+  //   .on('input.autoExpand', '.ui-group textarea', function(){
+  //       var minRows = this.getAttribute('data-min-rows') || 0, rows;
+  //       this.rows = minRows;
+  //       rows = Math.ceil((this.scrollHeight - this.baseScrollHeight) / 17);
+  //       this.rows = minRows + rows;
+  //   });
+
+  function initTextareaExpand(){
+    var textarea = $('.ui-group textarea');
+
+    textarea.on('keydown', debounce(autosize, 50));
+
+    function autosize(){
+      var el = this;
+      el.style.cssText = 'height:auto; padding:0';
+      el.style.cssText = 'height:' + el.scrollHeight + 'px';
+    }
+  }
 
   // file uploader
   function initFileUpload(){

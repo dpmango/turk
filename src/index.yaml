@@ -2,13 +2,13 @@ ProjectTitle: Musical Turk
 
 PageList:
 - file: submissions.html
-  ready: 85
+  ready: 100
 - file: new-batch.html
-  ready: 85
+  ready: 100
 - file: report.html
-  ready: 85
+  ready: 100
 - file: report-progress.html
-  ready: 85
+  ready: 100
 
 - file: field-level.html
   ready: 85

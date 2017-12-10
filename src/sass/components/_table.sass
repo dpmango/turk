@@ -1,6 +1,6 @@
 // TABLE
 .p-table
-  margin-top: 30px
+  margin-top: 33px
   width: 100%
   border-collapse: collapse
   border: 1px solid #EDEEF4
@@ -8,14 +8,14 @@
     background: #FBFCFE
     td
       font-size: 15px
-      padding: 30px 20px 15px 20px
+      padding: 30px 22px 15px 22px
       border-bottom: 1px solid $borderColor
   tbody
     td
       font-size: 16px
       letter-spacing: 0.44px
       background: white
-      padding: 20px 20px
+      padding: 20px 22px
       border-bottom: 1px solid rgba(#E8E9EC, .2)
       +tr
     tr
@@ -41,8 +41,9 @@
   &__status
     display: flex
     align-items: center
+    padding: 5px 0 4px 0
     span
-      margin-left: 15px
+      margin-left: 18px
     &--sucess
       color: $colorGreen
     &--failed
@@ -67,6 +68,15 @@
     //   td
     //     padding: 20px !important
 
++rmin($tablet)
+  .p-table
+    &--subm
+      tr
+        td
+          &:first-child
+            width: 125px
+          &:nth-child(2)
+            width: 210px
 
 +r($desktop)
   .p-table
