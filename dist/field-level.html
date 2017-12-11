@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <!-- MADE WITH LOVE BY <> KHMELEVSKOY & ASSOCIATES </> www.khmelevskoy.co-->
+    <meta charset="utf-8">
+    <title>Filed level</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff">
+    <meta name="format-detection" content="telephone=no">
+    <!-- remove for production-->
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" media="all" href="css/app.css"><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+  </head>
+  <body>
+    <div id="barba-wrapper">
+      <div class="page">
+        <!-- HEADER-->
+        <header class="header">
+          <div class="container">
+            <div class="header__wrapper">
+              <div class="header__logo"><a class="logo" href="#"><i class="icon icon-logo"></i></a></div>
+              <ul class="header__menu">
+                <li><a class="is-active" href="submissions.html">
+                    <svg class="ico ico-home">
+                      <use xlink:href="img/sprite.svg#ico-home"></use>
+                    </svg><span>Submissions (20)</span></a></li>
+                <li><a class="btn btn-primary" href="new-batch.html"><span>Add new dataset</span></a></li>
+              </ul>
+              <div class="header__user">
+                <div class="header__user-title">Welcome back,</div>
+                <div class="header__user-drop" js-header-dropdown>
+                  <div class="header__user-name">Johnathan</div>
+                  <svg class="ico ico-drop-selector">
+                    <use xlink:href="img/sprite.svg#ico-drop-selector"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="header__hamburger" js-hamburger>
+                <div class="hamburger hamburger--squeeze">
+                  <div class="hamburger-box">
+                    <div class="hamburger-inner"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <!-- header user dropdown-->
+        <!-- should be positioned outside header to prevent z-index conflicts          -->
+        <ul class="header__user-drop__options" js-header-dropdown-list>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Settings</a></li>
+          <hr>
+          <li><a href="#">Log Out  </a></li>
+        </ul>
+        <!-- MOBILE MENU-->
+        <div class="mobile-navi">
+          <ul class="mobile-navi__menu">
+            <li><a class="is-active" href="submissions.html">Submissions (20)</a></li>
+            <li><a href="new-batch.html">Add new dataset</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Log Out  </a></li>
+          </ul>
+        </div>
+        <div class="page__content">
+          <div class="p-contanier">
+            <div class="container">
+              <div class="p-contanier__wrapper">
+                <div class="container container--smaller"><a class="page-back" href="submissions.html">
+                    <div class="icon icon-arrow-back"></div><span>Report Summary</span></a>
+                  <div class="p-box report">
+                    <!-- summary-->
+                    <div class="report-summary">
+                      <div class="report-summary__col">
+                        <div class="report-summary__head">risk analysis</div>
+                        <div class="report-summary__text report-summary__text--red">Errors Per Row </div>
+                      </div>
+                      <div class="report-summary__label report-summary__label--red">failed</div>
+                      <div class="report-summary__col">
+                        <div class="report-summary__head">batch id</div>
+                        <div class="report-summary__text">1020</div>
+                      </div>
+                      <div class="report-summary__col">
+                        <div class="report-summary__head">batch</div>
+                        <div class="report-summary__text">Monday June 12th 2017 11:00AM PST</div>
+                      </div>
+                      <div class="report-summary__col">
+                        <div class="report-summary__head">download</div><a class="report-summary__text" href="#">
+                          <svg class="ico ico-download">
+                            <use xlink:href="img/sprite.svg#ico-download"></use>
+                          </svg></a>
+                      </div>
+                    </div>
+                    <!-- table-->
+                    <table class="p-table p-table--full" js-stacktable>
+                      <thead>
+                        <tr>
+                          <td>#</td>
+                          <td>Criteria ID and Link</td>
+                          <td>Short Explanation</td>
+                          <td>Test Data Row ID</td>
+                          <td>Test Data Field IDs & Values</td>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr js-modal data-mfp-src="#modal-1">
+                          <td>#</td>
+                          <td>Criteria ID and Link</td>
+                          <td>Short Explanation</td>
+                          <td>Test Data Row ID</td>
+                          <td>Test Data Field IDs & Values</td>
+                        </tr>
+                        <tr js-modal data-mfp-src="#modal-1">
+                          <td>#</td>
+                          <td>123152</td>
+                          <td>keywords match</td>
+                          <td>554</td>
+                          <td>000242</td>
+                        </tr>
+                        <tr js-modal data-mfp-src="#modal-1">
+                          <td>#</td>
+                          <td>12312412</td>
+                          <td>muscial, music for relax</td>
+                          <td>554</td>
+                          <td>00054</td>
+                        </tr>
+                        <tr js-modal data-mfp-src="#modal-1">
+                          <td>#</td>
+                          <td>5245</td>
+                          <td>keywords match</td>
+                          <td>554</td>
+                          <td>00000231</td>
+                        </tr>
+                        <tr js-modal data-mfp-src="#modal-1">
+                          <td>#</td>
+                          <td>23123</td>
+                          <td>sould, deep sound</td>
+                          <td>554</td>
+                          <td>2232323</td>
+                        </tr>
+                        <tr js-modal data-mfp-src="#modal-1">
+                          <td>#</td>
+                          <td>998</td>
+                          <td>keywords match</td>
+                          <td>234</td>
+                          <td>00423</td>
+                        </tr>
+                        <tr js-modal data-mfp-src="#modal-1">
+                          <td>#</td>
+                          <td>Criteria ID and Link</td>
+                          <td>Short Explanation</td>
+                          <td>Test Data Row ID</td>
+                          <td>Test Data Field IDs & Values</td>
+                        </tr>
+                        <tr js-modal data-mfp-src="#modal-1">
+                          <td>#</td>
+                          <td>123152</td>
+                          <td>keywords match</td>
+                          <td>554</td>
+                          <td>000242</td>
+                        </tr>
+                        <tr js-modal data-mfp-src="#modal-1">
+                          <td>#</td>
+                          <td>12312412</td>
+                          <td>muscial, music for relax</td>
+                          <td>554</td>
+                          <td>00054</td>
+                        </tr>
+                        <tr js-modal data-mfp-src="#modal-1">
+                          <td>#</td>
+                          <td>5245</td>
+                          <td>keywords match</td>
+                          <td>554</td>
+                          <td>00000231</td>
+                        </tr>
+                        <tr js-modal data-mfp-src="#modal-1">
+                          <td>#</td>
+                          <td>23123</td>
+                          <td>sould, deep sound</td>
+                          <td>554</td>
+                          <td>2232323</td>
+                        </tr>
+                        <tr js-modal data-mfp-src="#modal-1">
+                          <td>#</td>
+                          <td>998</td>
+                          <td>keywords match</td>
+                          <td>234</td>
+                          <td>00423</td>
+                        </tr>
+                        <tr js-modal data-mfp-src="#modal-1">
+                          <td>#</td>
+                          <td>Criteria ID and Link</td>
+                          <td>Short Explanation</td>
+                          <td>Test Data Row ID</td>
+                          <td>Test Data Field IDs & Values</td>
+                        </tr>
+                        <tr js-modal data-mfp-src="#modal-1">
+                          <td>#</td>
+                          <td>123152</td>
+                          <td>keywords match</td>
+                          <td>554</td>
+                          <td>000242</td>
+                        </tr>
+                        <tr js-modal data-mfp-src="#modal-1">
+                          <td>#</td>
+                          <td>12312412</td>
+                          <td>muscial, music for relax</td>
+                          <td>554</td>
+                          <td>00054</td>
+                        </tr>
+                        <tr js-modal data-mfp-src="#modal-1">
+                          <td>#</td>
+                          <td>5245</td>
+                          <td>keywords match</td>
+                          <td>554</td>
+                          <td>00000231</td>
+                        </tr>
+                        <tr js-modal data-mfp-src="#modal-1">
+                          <td>#</td>
+                          <td>23123</td>
+                          <td>sould, deep sound</td>
+                          <td>554</td>
+                          <td>2232323</td>
+                        </tr>
+                        <tr js-modal data-mfp-src="#modal-1">
+                          <td>#</td>
+                          <td>998</td>
+                          <td>keywords match</td>
+                          <td>234</td>
+                          <td>00423</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- more btn-->
+                  <div class="p-contanier__more"><a class="btn btn-more" href="#" js-load-more><span>Load more</span></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- MODALS-->
+          <!-- use [js-popup] on element (like a link) to trigger modal-->
+          <!-- use #id of element below and pass via data-mfp-src of href on clicked element-->
+          <div class="popup-dialog mfp-hide" id="modal-1">
+            <div class="container">
+              <div class="popup-info">
+                <div class="popup-info__col">
+                  <div class="popup-info__head">criteria id</div>
+                  <div class="popup-info__text">71</div>
+                </div>
+                <div class="popup-info__col">
+                  <div class="popup-info__head">error type</div>
+                  <div class="popup-info__text">Keyword Blacklist Match</div>
+                  <div class="popup-info__stopword">“Gangstar”</div>
+                </div>
+                <div class="popup-info__col popup-info__col--shrink">
+                  <div class="popup-info__head">rule</div>
+                  <div class="popup-info__rule">Field ID “#71 contains the value <b>“gangstar”</b>, which matches the blacklisted keyword <b>“gang”</b>.</div>
+                  <form class="popup-info__keylist" action="#" js-toggle data-toggle-opened="0">
+                    <div class="popup-info__keylist-anchor hover-link" js-toggle-anchor data-toggle-visible="Hide keyword blacklist" data-toggle-hidden="View keyword blacklist"><span>View keyword blacklist</span></div>
+                    <div class="popup-info__keylist-textarea" js-toggle-drop>
+                      <div class="ui-group ui-group--no-m">
+                        <textarea placeholder="Keyword blacklist" value="gangstar, gangster, gang"></textarea>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="popup-btn"><a class="btn btn-more" href="csv.html"><span>View errors in csv file</span></a></div>
+            </div>
+          </div>
+        </div>
+        <!-- FOOTER :: START-->
+        <footer class="footer" js-reveal-footer>
+          <div class="container">
+            <ul class="footer__menu">
+              <li><a href="#">Docs</a></li>
+              <li><a href="#">Customer Support</a></li>
+              <li><a href="mailto:info@musicalturk.co">info@musicalturk.co</a></li>
+            </ul>
+            <div class="footer__logo"><i class="icon icon-logo"></i></div>
+          </div>
+        </footer>
+        <!-- FOOTER :: END-->
+      </div>
+    </div>
+    <script src="js/vendor.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

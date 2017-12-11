@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <!-- MADE WITH LOVE BY <> KHMELEVSKOY & ASSOCIATES </> www.khmelevskoy.co-->
+    <meta charset="utf-8">
+    <title>New Batch</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff">
+    <meta name="format-detection" content="telephone=no">
+    <!-- remove for production-->
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" media="all" href="css/app.css"><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+  </head>
+  <body>
+    <div id="barba-wrapper">
+      <div class="page">
+        <!-- HEADER-->
+        <header class="header">
+          <div class="container">
+            <div class="header__wrapper">
+              <div class="header__logo"><a class="logo" href="#"><i class="icon icon-logo"></i></a></div>
+              <ul class="header__menu">
+                <li><a class="is-active" href="submissions.html">
+                    <svg class="ico ico-home">
+                      <use xlink:href="img/sprite.svg#ico-home"></use>
+                    </svg><span>Submissions (20)</span></a></li>
+                <li><a class="btn btn-primary" href="new-batch.html"><span>Add new dataset</span></a></li>
+              </ul>
+              <div class="header__user">
+                <div class="header__user-title">Welcome back,</div>
+                <div class="header__user-drop" js-header-dropdown>
+                  <div class="header__user-name">Johnathan</div>
+                  <svg class="ico ico-drop-selector">
+                    <use xlink:href="img/sprite.svg#ico-drop-selector"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="header__hamburger" js-hamburger>
+                <div class="hamburger hamburger--squeeze">
+                  <div class="hamburger-box">
+                    <div class="hamburger-inner"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <!-- header user dropdown-->
+        <!-- should be positioned outside header to prevent z-index conflicts          -->
+        <ul class="header__user-drop__options" js-header-dropdown-list>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Settings</a></li>
+          <hr>
+          <li><a href="#">Log Out  </a></li>
+        </ul>
+        <!-- MOBILE MENU-->
+        <div class="mobile-navi">
+          <ul class="mobile-navi__menu">
+            <li><a class="is-active" href="submissions.html">Submissions (20)</a></li>
+            <li><a href="new-batch.html">Add new dataset</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Log Out  </a></li>
+          </ul>
+        </div>
+        <div class="page__content">
+          <div class="p-contanier">
+            <div class="container">
+              <div class="p-contanier__wrapper">
+                <div class="container container--smaller">
+                  <!-- page back--><a class="page-back" href="submissions.html">
+                    <div class="icon icon-arrow-back"></div><span>Submissions</span></a>
+                  <!-- upload form-->
+                  <form class="p-box upload" action="#">
+                    <div class="upload__title">
+                      <svg class="ico ico-upload">
+                        <use xlink:href="img/sprite.svg#ico-upload"></use>
+                      </svg>
+                      <h1>Upload new dataset</h1>
+                    </div>
+                    <!-- group-->
+                    <div class="upload__group">
+                      <div class="upload__group-name">
+                        <svg class="ico ico-market-music">
+                          <use xlink:href="img/sprite.svg#ico-market-music"></use>
+                        </svg><span>Choose a dataset (csv only)</span>
+                      </div>
+                      <div class="ui-group">
+                        <label>Dataset</label>
+                        <div class="uploader" js-uploader data-validate="csv">
+                          <div class="uploader__btn">
+                            <label>Choose file
+                              <input type="file" id="file" name="file">
+                            </label>
+                          </div>
+                          <div class="uploader__current">
+                            <div class="uploader__current-filename"></div>
+                            <svg class="ico ico-close">
+                              <use xlink:href="img/sprite.svg#ico-close"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- group-->
+                    <div class="upload__group">
+                      <div class="upload__group-name">
+                        <svg class="ico ico-market-music">
+                          <use xlink:href="img/sprite.svg#ico-market-music"></use>
+                        </svg><span>Parameters</span>
+                      </div>
+                      <div class="ui-group">
+                        <label>Artist blacklist</label>
+                        <textarea placeholder="Artist 1"></textarea>
+                      </div>
+                      <div class="ui-group">
+                        <label>Keyword blacklist</label>
+                        <textarea placeholder="keywrods" value="Garbage, gangster, gangstar, gang"></textarea>
+                      </div>
+                      <div class="ui-group">
+                        <label>Duplicates threshold</label>
+                        <input placeholder="25%">
+                      </div>
+                      <div class="ui-group">
+                        <label>Various Artists threshold</label>
+                        <input placeholder="Count or percentage">
+                      </div>
+                      <div class="ui-group">
+                        <label>Language</label>
+                        <div class="ui-checkbox-row">
+                          <div class="ui-checkbox">
+                            <input type="checkbox" name="cb" id="cb_1">
+                            <label for="cb_1"> <span>Brazilian Portugese</span></label>
+                          </div>
+                          <div class="ui-checkbox">
+                            <input type="checkbox" name="cb" id="cb_2">
+                            <label for="cb_2"><span>English</span></label>
+                          </div>
+                          <div class="ui-checkbox">
+                            <input type="checkbox" name="cb" id="cb_3">
+                            <label for="cb_3"><span>Spanish</span></label>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- CTA-->
+                      <div class="upload__cta">
+                        <button class="btn btn-primary btn--filled" type="submit"><span>Start Testing</span></button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- FOOTER :: START-->
+        <footer class="footer" js-reveal-footer>
+          <div class="container">
+            <ul class="footer__menu">
+              <li><a href="#">Docs</a></li>
+              <li><a href="#">Customer Support</a></li>
+              <li><a href="mailto:info@musicalturk.co">info@musicalturk.co</a></li>
+            </ul>
+            <div class="footer__logo"><i class="icon icon-logo"></i></div>
+          </div>
+        </footer>
+        <!-- FOOTER :: END-->
+      </div>
+    </div>
+    <script src="js/vendor.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

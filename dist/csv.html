@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <!-- MADE WITH LOVE BY <> KHMELEVSKOY & ASSOCIATES </> www.khmelevskoy.co-->
+    <meta charset="utf-8">
+    <title>CSV</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff">
+    <meta name="format-detection" content="telephone=no">
+    <!-- remove for production-->
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" media="all" href="css/app.css"><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+  </head>
+  <body class="csv">
+    <div id="barba-wrapper">
+      <div class="page">
+        <!-- HEADER-->
+        <header class="header">
+          <div class="container">
+            <div class="header__wrapper">
+              <div class="header__logo"><a class="logo" href="#"><i class="icon icon-logo"></i></a></div>
+              <ul class="header__menu">
+                <li><a class="is-active" href="submissions.html">
+                    <svg class="ico ico-home">
+                      <use xlink:href="img/sprite.svg#ico-home"></use>
+                    </svg><span>Submissions (20)</span></a></li>
+                <li><a class="btn btn-primary" href="new-batch.html"><span>Add new dataset</span></a></li>
+              </ul>
+              <div class="header__user">
+                <div class="header__user-title">Welcome back,</div>
+                <div class="header__user-drop" js-header-dropdown>
+                  <div class="header__user-name">Johnathan</div>
+                  <svg class="ico ico-drop-selector">
+                    <use xlink:href="img/sprite.svg#ico-drop-selector"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="header__hamburger" js-hamburger>
+                <div class="hamburger hamburger--squeeze">
+                  <div class="hamburger-box">
+                    <div class="hamburger-inner"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <!-- header user dropdown-->
+        <!-- should be positioned outside header to prevent z-index conflicts          -->
+        <ul class="header__user-drop__options" js-header-dropdown-list>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Settings</a></li>
+          <hr>
+          <li><a href="#">Log Out  </a></li>
+        </ul>
+        <!-- MOBILE MENU-->
+        <div class="mobile-navi">
+          <ul class="mobile-navi__menu">
+            <li><a class="is-active" href="submissions.html">Submissions (20)</a></li>
+            <li><a href="new-batch.html">Add new dataset</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Log Out  </a></li>
+          </ul>
+        </div>
+        <div class="page__content">
+          <!-- add this class to make header static (not sticky)-->
+          <!-- sticky might break header layout on this page-->
+          <div class="header-static"></div>
+          <!-- CSV container with white BG-->
+          <div class="p-csv">
+            <div class="container">
+              <!-- summary-->
+              <div class="report-summary report-summary--csv"><a class="page-back" href="submissions.html">
+                  <div class="icon icon-arrow-back"></div><span>back to report</span></a>
+                <div class="report-summary__col">
+                  <div class="report-summary__head">batch id</div>
+                  <div class="report-summary__text">1020</div>
+                </div>
+                <div class="report-summary__col">
+                  <div class="report-summary__head">batch</div>
+                  <div class="report-summary__text">Monday June 12th 2017 11:00AM PST<a href="#">
+                      <svg class="ico ico-download">
+                        <use xlink:href="img/sprite.svg#ico-download"></use>
+                      </svg></a></div>
+                </div>
+                <div class="report-summary__label report-summary__label--green">success</div>
+              </div>
+            </div>
+          </div>
+          <!-- CSV-->
+          <div class="csv-box">
+            <div class="csv-box__placeholder">CSV</div>
+            <div class="xml-code">
+              <pre>
+                <xmp><?xml version=«1.0» encoding=«UTF-8» ?>
+<OrdersList>
+  <SendOrder date=«1486019811» nomber=«63723» price_sum=«6940» weight_sum=«800»>
+    <UserInfo>
+      <family>Name</family>
+      <name>Surename</name>
+      <patronymic>Patronimic</patronymic>
+      <phone>04656565242</phone>
+      <email>test@gmail.com</email>
+    </UserInfo>
+    <Delivery>
+      <transport_companies>4</transport_companies>
+      <city_id>0a7e138b-7c55-4745-8a75-0441df4d3432</city_id>
+      <delivery_points_id>900305</delivery_points_id>
+      <price_delivery>400</price_delivery>
+    </Delivery>
+    <Commentary></Commentary>
+    <Items>
+      <Item article_product=«00122000» title=«Some really really long title goes here just for testing purposes» count=«1» price=«6940»/>
+    </Items>
+  </SendOrder>
+</OrdersList>
+                </xmp></pre>
+            </div>
+          </div>
+        </div>
+        <!-- FOOTER :: START-->
+        <footer class="footer" js-reveal-footer>
+          <div class="container">
+            <ul class="footer__menu">
+              <li><a href="#">Docs</a></li>
+              <li><a href="#">Customer Support</a></li>
+              <li><a href="mailto:info@musicalturk.co">info@musicalturk.co</a></li>
+            </ul>
+            <div class="footer__logo"><i class="icon icon-logo"></i></div>
+          </div>
+        </footer>
+        <!-- FOOTER :: END-->
+      </div>
+    </div>
+    <script src="js/vendor.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
