@@ -2552,12 +2552,12 @@ html.mfp-helper body {
 }
 
 /* GENERAL STYLES */
-.p-contanier {
+.p-container {
   position: relative;
   z-index: 19;
 }
 
-.p-contanier__wrapper {
+.p-container__wrapper {
   background: #FBFCFE;
   -webkit-box-shadow: 0 10px 14px 0 rgba(69, 73, 91, 0.08);
           box-shadow: 0 10px 14px 0 rgba(69, 73, 91, 0.08);
@@ -2565,7 +2565,7 @@ html.mfp-helper body {
   margin-bottom: 20px;
 }
 
-.p-contanier__more {
+.p-container__more {
   text-align: center;
   margin-top: 50px;
 }
@@ -2651,7 +2651,7 @@ html.mfp-helper body {
 }
 
 @media only screen and (max-width: 568px) {
-  .p-contanier__wrapper {
+  .p-container__wrapper {
     margin-left: -30px;
     margin-right: -30px;
   }
@@ -2664,7 +2664,7 @@ html.mfp-helper body {
 }
 
 @media only screen and (max-width: 375px) {
-  .p-contanier__wrapper {
+  .p-container__wrapper {
     margin-left: -20px;
     margin-right: -20px;
   }
