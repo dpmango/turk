@@ -3702,9 +3702,19 @@ html.mfp-helper body {
   overflow-x: scroll;
 }
 
-.xml-code pre, .xml-code xmp {
+.xml-code pre, .xml-code xmp, .xml-code table {
   margin: 0;
-  padding: 20px;
+  padding: 0px 20px;
+}
+
+.xml-code table {
+  margin-bottom: 50px;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.xml-code table td {
+  padding: 0 5px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -3716,7 +3726,7 @@ html.mfp-helper body {
     border-left: 0;
     border-right: 0;
   }
-  .xml-code pre, .xml-code xmp {
+  .xml-code pre, .xml-code xmp, .xml-code table {
     padding: 0 15px;
   }
 }

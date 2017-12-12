@@ -73,6 +73,8 @@ $(document).ready(function(){
     initTogglePlugin();
     initTextareaExpand();
     initFileUpload();
+
+    parseTable();
   }
 
   pageReady();
@@ -220,6 +222,54 @@ $(document).ready(function(){
   function initStackTable(){
     $('[js-stacktable]').stacktable();
   }
+
+  ////////////
+  // JS PARSE TABLE
+  ////////////
+  function parseTable(){
+
+    var input = $('[js-parse-table] xmp').text();
+    var lines = input.split('\n');
+    var exportTabs = [];
+
+    for(var line = 0; line < lines.length; line++){
+      // By tabs
+      var tabs = lines[line].split('\t');
+
+      exportTabs.push(tabs);
+
+      // last line
+      if ( line == lines.length - 1 ){
+        createTable(exportTabs)
+      }
+
+      // for(var tab = 0; tab < tabs.length; tab++){
+      //   console.log(tabs[tab]);
+      // }
+    }
+  }
+
+  function createTable(tableData) {
+    var table = document.createElement('table');
+    var tableBody = document.createElement('tbody');
+
+    tableData.forEach(function(rowData) {
+      var row = document.createElement('tr');
+
+      rowData.forEach(function(cellData) {
+        var cell = document.createElement('td');
+        cell.appendChild(document.createTextNode(cellData));
+        row.appendChild(cell);
+      });
+
+      tableBody.appendChild(row);
+    });
+
+    table.appendChild(tableBody);
+    $('[js-parse-table]').append(table);
+    $('[js-parse-table] xmp').remove();
+  }
+
 
   ////////////
   // PERFECT SCROLLBAR
