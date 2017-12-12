@@ -3709,12 +3709,17 @@ html.mfp-helper body {
 
 .xml-code table {
   margin-bottom: 50px;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.3;
 }
 
+.xml-code table tr:first-child {
+  font-size: 15px;
+  white-space: nowrap;
+}
+
 .xml-code table td {
-  padding: 0 5px;
+  padding: 0 10px;
 }
 
 @media only screen and (max-width: 768px) {
